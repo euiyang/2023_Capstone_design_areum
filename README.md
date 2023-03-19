@@ -35,5 +35,5 @@ image
 7. 매칭: 신청 넣은 인원과 해당 방에 대한 매칭
 8. 포트폴리오: 사용자의 프로필과 연구실, 동아리, 스터디에 대한 정보 추가 가능한 포트폴리오 페이지
 
-#
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b87f4a2-90ba-490a-aa65-7b3b643c4bac/Untitled.png
+#기능
+![image](https://user-images.githubusercontent.com/104750924/226174459-481dc953-a48b-47a7-916d-2e3de83ac3d9.png)
