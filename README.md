@@ -1,1 +1,1 @@
-# 2023_Capstone_design_DanDan_-
+# 2023_Capstone_design_areum
