@@ -47,6 +47,17 @@
 8. 포트폴리오: 사용자의 프로필과 연구실, 동아리, 스터디에 대한 정보 추가 가능한 포트폴리오 페이지
 
 ## 기능
-
-
 ![image](https://user-images.githubusercontent.com/104750924/226174459-481dc953-a48b-47a7-916d-2e3de83ac3d9.png)
+
+
+## 기술 스택
+### Back-end
+![image](https://user-images.githubusercontent.com/65746019/226838722-e7897775-635d-462e-b4f2-a8163f883cab.png)
+
+### Front-end
+![image](https://user-images.githubusercontent.com/65746019/226838832-7fa6961e-a891-4858-855f-dd4d459a0f69.png)
+
+### Communication
+![image](https://user-images.githubusercontent.com/65746019/226839407-3cd64cbe-9652-4a9b-a9f9-24ed684ff6b5.png)
+
+
