@@ -4,9 +4,9 @@
 
 
 ## TEAM 구칠구팔 👨‍👨‍👧‍👦
-|       |안찬웅 | 정의양 | 김성현 | 장민영 |
-|-------|-------|-------|-------|-------|
-|역할|Back-end|Back-end|Back-end|Front-end|
+|안찬웅([@AnChanUng](https://github.com/AnChanUng))|정의양([@Euiyang](https://github.com/euiyang))|김성현([@DownShiftkor](https://github.com/downshiftkor))|장민영([@minoii311](https://github.com/minoii311))|
+|---|---|---|---|
+|Back-end|Back-end|Back-end|Front-end|
 
 
 
