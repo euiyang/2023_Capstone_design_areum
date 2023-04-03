@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 function SignIn(){
@@ -5,19 +6,27 @@ function SignIn(){
     const idRef=useRef();
     const pwRef=useRef();
 
-    const handleSignIn=(e)=>{
+    const handleSignIn=async(e)=>{
         e.preventDefault();
 
-        const updateId=idRef.current.value;
-        const updatePw=pwRef.current.value;
-
-        //id, pw 형식 확인
-
         //id, pw 전송
+        try{
+            await axios
+            .post("http://localhost:8080/login",{
+                id:idRef.current.value,
+                pw:pwRef.current.value,
+            })
+            .then((res)=>{//성공시 res로 값을 받음
+                // if(res.data.id)
+                //id, pw 실패시 어떤 값을 넣어 전송할지 정하기
+
+                //token도 res.data.token으로 받을수 있음
+            })
+        }catch(error){
+            console.log(error);
+        }
 
     }
-
-    //navigation 구현부
 
 
     return(
