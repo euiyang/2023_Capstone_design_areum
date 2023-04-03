@@ -1,12 +1,12 @@
-import {useState,useRef} from "react";
+import {useState} from "react";
 import Select from "react-select";
 function ProfileEdit({user,onSave}){
 
     const[name,setName]=useState(user.name);
     const[status,setStatus]=useState(user.status);
-    const[num,setNum]=useState(user.studentNum);
-    const[dep,setDep]=useState(user.department);
-    const[email,setEmail]=useState(user.eMail);
+    const[studentNum,setStudentNum]=useState(user.studentNum);
+    const[department,setDepartment]=useState(user.department);
+    const[eMail,setEMail]=useState(user.eMail);
 
 
     let statusOption=[
@@ -17,12 +17,14 @@ function ProfileEdit({user,onSave}){
         ...user,
         name,
         status,
-        num,
-        dep,
-        email
+        studentNum,
+        department,
+        eMail
     }
+    //다른 변수로 지정할 경우 studentNum: num 형태로 입력하면 됨.
 
-    function handleSave(){
+    const handleSave=(e)=>{
+        e.preventDefault();
         onSave(updateData);
     }
 
@@ -33,13 +35,13 @@ function ProfileEdit({user,onSave}){
             <li>이름:<input type="text" value={name} onChange={(e)=>setName(e.target.value)}></input></li>
             <li>상태:<Select
                 options={statusOption} 
-                value={status} 
-                onChange={(e)=>setStatus(e.target.value)}
+                value={{value: status, label:status}} 
+                onChange={(selectedOption)=>setStatus(selectedOption.value)}
                 placeholder="선택하세요"/>
             </li>
-            <li>학번:<input type="text" value={num} onChange={(e)=>setNum(e.target.value)}></input></li>
-            <li>학과:<input type="text" value={dep} onChange={(e)=>setDep(e.target.value)}></input></li>
-            <li>이메일:<input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}></input></li>
+            <li>학번:<input type="text" value={studentNum} onChange={(e)=>setStudentNum(e.target.value)}></input></li>
+            <li>학과:<input type="text" value={department} onChange={(e)=>setDepartment(e.target.value)}></input></li>
+            <li>이메일:<input type="text" value={eMail} onChange={(e)=>setEMail(e.target.value)}></input></li>
             </ul>
             <button onClick={handleSave}>send</button>
         </div>

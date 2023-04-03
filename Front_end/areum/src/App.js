@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
-import './App.css';
 import Profile from './pages/profile/Profile.js'
 import ProfileEdit from './pages/profile/ProfileEdit.js'
 import Resume from './pages/profile/Resume.js'
+import SignIn from './pages/login/SignIn.js'
+import SignUp from './pages/login/SignUp.js'
+import Home from './pages/home/Home.js'
 
 function App() {
   let [user,setUser]=useState({
@@ -21,17 +23,14 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <ul>
-        <li><Link to="/"> home </Link></li>
-        <li><Link to="/profile"> User Profile </Link></li>
-        <li><Link to="/profileEdit"> Profile Edit </Link></li>
-        <li><Link to ="resume"> Resume </Link> </li>
-      </ul>
       <hr/>
         <Routes>
+          <Route path="/"element={<Home/>}/>
           <Route path="/profile" element={<Profile user={user}/>}/>
           <Route path="/profileEdit" element={<ProfileEdit user={user} onSave={handleSave}/>}/>
           <Route path="/resume" element={<Resume/>}/>
+          <Route path="/signIn" element={<SignIn/>}/>
+          <Route path="/signUp" element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
       
