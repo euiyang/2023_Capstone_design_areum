@@ -1,0 +1,40 @@
+<div style="background-color: #f2f2f2; padding: 20px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h1 style="font-family: 'Arial', sans-serif; font-size: 36px; color: #333;">Aegis 동아리 소개</h1>
+        <div style="display: flex; align-items: center;">
+            <a href="https://cms.dankook.ac.kr/html_portlet_repositories/images/ExtImgFile/10158/3793226/763837/84617.jpeg" target="_blank">
+                <img src="https://cms.dankook.ac.kr/html_portlet_repositories/images/ExtImgFile/10158/3793226/763837/84617.jpeg" alt="Aegis logo" style="width: 100px; height: 100px;" id="aegis-logo">
+            </a>
+        </div>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ddd; margin: 20px 0;">
+    <p style="font-family: 'Arial', sans-serif; font-size: 16px; line-height: 1.5; color: #666;">
+        <strong style="color: #333;">[Aegis] 동아리 성격 및 활동 목적</strong><br>
+        "Aegis라는 이름은 그리스/로마 신화에서 아테나의 방패에서 유래하였습니다.
+        방패를 뜻하는 Aegis는 제우스의 번게에도 뚫리지 않는 단단한 방어력을 가진 동시에 고르곤의 머리가 방패에 붙어있어 강력한 공격력을 가지고 있습니다.
+        이러한 방패에서 따왔듯이, Aegis는 강력한 방어와 공격을 동시에 가진 해킹팀 이란 의미를 담기 위한 이름입니다." 최고의 방어는 공격이라는 말이 있습니다.
+        해커들은 컴퓨터 공격을 방어하는 능력이 가장 중요하게 평가되지만, 역으로 상대측을 공격해 공격수단을 뺏는 것 또한 중요한 역량입니다.
+        Aegis는 아테나의 방패처럼 화이트해커로서 악질적인 해커로부터의 위협을 방어하는 동시에, 그 능력에 못지 않는 해킹 능력을 갖추는 것이 목적입니다.
+        Aegis의 경우, 현재 1학기에는 스터디 모집이 완료되어 각 스터디장의 지휘아래 스터디가 활발하게 진행중이며, C, Python, Java를 잘 모르는 동아리원을 대상으로 한 상시 스터디가 운영중입니다.
+        또한 동아리 내 1~2학년을 대상으로 한 프로그래밍 대회가 진행될 예정이며 전문가 세미나도 예정이 되어있습니다.
+        2학기 또한 1학기때와 마찬가지로 스터디 모집 후 스터디가 진행될 예정이며 각종 세미나와 이벤트가 진행 될 예정입니다.
+    </p>
+    <a href="https://forms.gle/HoccKk7FvZuzoiNY9"
+       style="display: inline-block; margin-top: 20px; padding: 5px 10px; background-color: #333; color: #fff; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 16px;"
+       id="apply-button"
+    >
+        신청하기
+    </a>
+    <div id="click-counter" style="margin-top: 10px;"></div>
+</div>
+
+<script>
+    let clickCount = 0;
+    const applyButton = document.getElementById("apply-button");
+    const clickCounter = document.getElementById("click-counter");
+
+    applyButton.addEventListener("click", () => {
+        clickCount++;
+        clickCounter.textContent = `현재까지 ${clickCount} 명이 신청하러 갔습니다!.`;
+    });
+</script>
