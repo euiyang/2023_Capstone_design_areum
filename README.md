@@ -62,14 +62,10 @@
 
 
 ## 기술 스택
-### Back-end
-![image](https://user-images.githubusercontent.com/65746019/226838722-e7897775-635d-462e-b4f2-a8163f883cab.png)
 
-### Front-end
-![image](https://user-images.githubusercontent.com/65746019/226838832-7fa6961e-a891-4858-855f-dd4d459a0f69.png)
+![image](![stack](https://user-images.githubusercontent.com/78256055/230915822-e699c37d-135b-4796-ac72-bf8c2130f7a8.PNG)
+)
 
-### Communication
-![image](https://user-images.githubusercontent.com/65746019/226839407-3cd64cbe-9652-4a9b-a9f9-24ed684ff6b5.png)
 
 
 
@@ -99,7 +95,7 @@
 - 5주차 스프린트
   - UI 디자인 초안 구현 (홈페이지, 로그인, 회원가입, 마이 페이지 등)
   
-<img src="https://user-images.githubusercontent.com/65746019/230911940-40f6dbaf-709e-4d7e-8087-a35e9f0797b6.jpeg"  width="500" height="750"/><img src="https://user-images.githubusercontent.com/65746019/230911992-9e3de0ce-2150-40e0-8fa4-1056bf0e0c31.jpeg"  width="500" height="750"/>
-<img src="https://user-images.githubusercontent.com/65746019/230912759-e28680b1-073a-487e-8c66-b1853ff105e8.jpeg"  width="500" height="750"/><img src="https://user-images.githubusercontent.com/65746019/230912838-1ac195e2-4675-47a1-926e-7400fc3bdf94.jpeg"  width="500" height="750"/>
+<img src="https://user-images.githubusercontent.com/65746019/230911940-40f6dbaf-709e-4d7e-8087-a35e9f0797b6.jpeg"  width="500" height="800"/><img src="https://user-images.githubusercontent.com/65746019/230911992-9e3de0ce-2150-40e0-8fa4-1056bf0e0c31.jpeg"  width="500" height="800"/>
+<img src="https://user-images.githubusercontent.com/65746019/230912759-e28680b1-073a-487e-8c66-b1853ff105e8.jpeg"  width="500" height="800"/><img src="https://user-images.githubusercontent.com/65746019/230912838-1ac195e2-4675-47a1-926e-7400fc3bdf94.jpeg"  width="500" height="800"/>
 
 
