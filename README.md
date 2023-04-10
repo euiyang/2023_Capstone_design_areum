@@ -1,5 +1,5 @@
 # 2023_Capstone_design_areum
-학업교류, 아름(areum)
+학업교류, 알음(areum)
 소프트웨어학과 학업교류 서비스
 
 
@@ -60,4 +60,9 @@
 ### Communication
 ![image](https://user-images.githubusercontent.com/65746019/226839407-3cd64cbe-9652-4a9b-a9f9-24ed684ff6b5.png)
 
+## 팀 규칙
 
+- 주 1~2회 회의 진행하기
+- 주 단위 목표를 정하고 실행하기 (+@@@!)
+- 원하는 추가 기능이 있다면 즉시 공유하기
+- 서로의 영역을 구분짓지 않고 목표 달성을 위해 협업 지향하기!
