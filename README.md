@@ -70,6 +70,7 @@
 ## 프로젝트 진행 일정
 ### 스프린트
 ![image](https://user-images.githubusercontent.com/65746019/230909013-dd4637eb-e189-4800-867f-32c6c0dfa8d7.png)
+
 이미지 출처 https://brainhub.eu/blog/differences-lean-agile-scrum/ 
 
 세분화한 항목에 초점을 맞추고 1-3주 정도의 기간의 목표를 설정하는 것.
