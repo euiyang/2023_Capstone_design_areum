@@ -4,7 +4,7 @@
 
 
 ## TEAM 구칠구팔 👨‍👨‍👧‍👦
-|안찬웅([@AnChanUng](https://github.com/AnChanUng))|정의양([@Euiyang](https://github.com/euiyang))|김성현([@DownShiftkor](https://github.com/downshiftkor))|장민영([@minoii311](https://github.com/minoii311))|
+|안찬웅([@AnChanUng](https://github.com/AnChanUng))|정의양([@Euiyang](https://github.com/euiyang))|김성현([@downshiftkor](https://github.com/downshiftkor))|장민영([@minoii311](https://github.com/minoii311))|
 |---|---|---|---|
 |Back-end|Back-end|Back-end|Front-end|
 
