@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import './SignUp.css'
 
 function SignUp(){
 
@@ -52,11 +53,11 @@ function SignUp(){
                 <li>비밀번호:<input type="password" ref={pwRef}></input></li>
                 <li>비밀번호 확인:<input type="password" ref={pwRecRef}></input></li>
                 <button onClick={handlePw}>비밀번호 중복 확인</button>
-                <li>이메일:<input type="email" ref={emailRef}></input></li>
+            
                 <li>이름:<input type="text" ref={nameRef}></input></li> 
                 <li>전화번호:<input type="tel" ref={phoneNumRef}></input></li>
 
-                <button onClick={handleSignUp}>로그인</button>
+                <button onClick={handleSignUp}>회원가입</button>
             </form>
         </div>
     );

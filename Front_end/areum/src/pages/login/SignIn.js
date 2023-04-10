@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import './SignIn.css'
+
 function SignIn(){
 
     const idRef=useRef();
@@ -32,8 +34,8 @@ function SignIn(){
     return(
         <div className='signIn'>
             <form>
-                <li>id:<input type="text" ref={idRef}></input></li>
-                <li>password:<input type="password" ref={pwRef}></input></li>
+                <li>아이디:  <input type="text" ref={idRef}></input></li>
+                <li>비밀번호:<input type="password" ref={pwRef}></input></li>
                 <button onClick={handleSignIn}>로그인</button>
             </form>
             <li><Link to ="/signUp"> 회원가입 </Link> </li>
