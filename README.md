@@ -63,8 +63,7 @@
 
 ## 기술 스택
 
-![image](![stack](https://user-images.githubusercontent.com/78256055/230915822-e699c37d-135b-4796-ac72-bf8c2130f7a8.PNG)
-)
+![stack](https://user-images.githubusercontent.com/78256055/230916615-1fbe6e2b-fb95-475d-b173-eb5ea7eba9d6.PNG)
 
 
 
