@@ -4,6 +4,7 @@ import "./Home.css";
 function Home(){
     return (
         <div className='home'>
+
             <div className="header">
                 <hi>Logo</hi>
                 <ui className="header-menu">

@@ -19,11 +19,45 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//lombok
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+	testCompileOnly 'org.projectlombok:lombok:1.18.26'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	dependencies {
+
+		//추후 DB연동시 주석 해재 후 작업 필요
+		//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+		//스프링 시큐리티 로그인오류 주석
+//		implementation 'org.springframework.boot:spring-boot-starter-security'
+//		implementation 'org.springframework.boot:spring-boot-starter-web'
+//		implementation 'org.springframework.boot:spring-boot-starter-websocket'
+//		implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	}
+
+	//jwt인증인가
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
 }
+
+
 
 tasks.named('test') {
 	useJUnitPlatform()
