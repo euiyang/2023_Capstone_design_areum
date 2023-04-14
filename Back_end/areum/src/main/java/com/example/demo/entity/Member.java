@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,9 +12,9 @@ import lombok.Setter;
 public class Member {
 
     @Id @GeneratedValue
-    private Long memberId;
-    private String id;
-    private String pw;
+    private Long id;
+    private String memberId;
+    private String memberPw;
     private String name;
     private String email;
     private String phone;

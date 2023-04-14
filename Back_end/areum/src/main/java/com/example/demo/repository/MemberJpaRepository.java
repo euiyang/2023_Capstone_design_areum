@@ -1,8 +1,12 @@
 package com.example.demo.repository;
 
-import com.example.demo.domain.Member;
+import com.example.demo.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MemberJpaRepository extends JpaRepository<Member, Long> {
+import java.util.Optional;
 
+public interface MemberJpaRepository extends JpaRepository<Member, Long> {
+    int countByMemberId(String id);
+
+    Optional<Member> findByMemberId(String id);
 }

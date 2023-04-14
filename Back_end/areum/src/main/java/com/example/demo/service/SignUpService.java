@@ -13,7 +13,7 @@ import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
-public class MemberService {
+public class SignUpService {
     private final MemberJpaRepository memberRepository;
     private final JavaMailSender jms;
 
@@ -28,9 +28,9 @@ public class MemberService {
         return code;
     }
 
-    public boolean checkId(String id){
-        if(memberRepository.countByMemberId(id)==1) return true;
-        else return false;
+    public String checkId(String id){
+        if(memberRepository.countByMemberId(id)==1) return "1";
+        else return "0";
     }
 
     public String sendCode(String email){
@@ -44,7 +44,7 @@ public class MemberService {
         return code;
     }
 
-    public String join(SignUpDto signUpDto){
+    public void join(SignUpDto signUpDto){
         Member member = new Member();
         member.setMemberId(signUpDto.getId());
         member.setMemberPw(signUpDto.getPw());
