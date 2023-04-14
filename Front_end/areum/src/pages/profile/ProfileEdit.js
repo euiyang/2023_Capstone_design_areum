@@ -1,6 +1,6 @@
 import {useState} from "react";
 import Select from "react-select";
-function ProfileEdit({user,onSave}){
+function ProfileEdit(){
 
     const[name,setName]=useState(user.name);
     const[status,setStatus]=useState(user.status);

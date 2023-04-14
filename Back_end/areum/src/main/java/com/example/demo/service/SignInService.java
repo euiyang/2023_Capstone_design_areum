@@ -19,7 +19,9 @@ public class SignInService {
 
         if(member.isPresent()){
             if(member.get().getMemberPw().equals(signInDto.getPw())) return "success";
+            else return "pwFail";
+        }else{
+            return "idFail";
         }
-        return "fail";
     }
 }

@@ -4,7 +4,6 @@ import com.example.demo.dto.SignInDto;
 import com.example.demo.service.SignInService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

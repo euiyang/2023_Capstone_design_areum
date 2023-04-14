@@ -29,7 +29,7 @@ public class SignUpService {
     }
 
     public String checkId(String id){
-        if(memberRepository.countByMemberId(id)==1) return "1";
+        if(memberRepository.findByMemberId(id).isPresent()) return "1";
         else return "0";
     }
 

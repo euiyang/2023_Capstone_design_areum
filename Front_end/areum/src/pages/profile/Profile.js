@@ -1,4 +1,4 @@
-function Profile({user}){
+function Profile(){
     return (
         <div className='profile'>
             <h1>student profile</h1>
