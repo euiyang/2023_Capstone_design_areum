@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect,useRef, useState } from "react";
+import './SignUp.css'
 function SignUp(){
 
     const [id,setId]=useState("");
@@ -177,7 +178,7 @@ function SignUp(){
                 <li>전화번호:<input type="tel" onChange={e=>setPhoneNum(e.target.value)}></input></li>
                 <li>학과:<input type="text" onChange={e=>setDep(e.target.value)}></input></li>
 
-                <button onClick={handleSignUp}>로그인</button>
+                <button onClick={handleSignUp}>회원가입</button>
             </form>
         </div>
     );

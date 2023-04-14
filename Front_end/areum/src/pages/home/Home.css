@@ -1,0 +1,143 @@
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px;
+  }
+  
+  .header h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  .header-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-menu li {
+    margin-right: 20px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .signin-btn{
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #868893;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .signup-btn {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .notification-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3f51b5;
+    margin-left: 10px;
+  }
+
+ .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* 왼쪽 로그인 박스 */
+  .left-container {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .login-box {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  /* 오른쪽 검색 바 및 컨텐츠 */
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .search-bar {
+    width: 300px;
+  height: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-right: 20px;
+  }
+  
+  .contents {
+    width: 300px;
+  height: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-right: 20px;
+  }
+  
+  .contents h2 {
+    margin: 0;
+  }
+  
+  /* 각 컨텐츠의 스타일링 */
+  .study-content {
+    width: calc((100% - 60px) / 3);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  }
+  
+  .group-content {
+    width: calc((100% - 60px) / 3);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  }
+  
+  .lab-content {
+    width: calc((100% - 60px) / 3);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  }

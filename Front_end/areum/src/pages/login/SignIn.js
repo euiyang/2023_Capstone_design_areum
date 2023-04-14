@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import './SignIn.css'
+
 function SignIn(){
 
     const [id,setId]=useState("");
@@ -54,6 +56,7 @@ function SignIn(){
                 <li>id:<input type="text" onChange={e=>setId(e.target.value)}></input></li>
                 <li>password:<input type="password" onChange={e=>setPw(e.target.value)}></input></li>
                 <li>{answer}</li>
+
                 <button onClick={handleSignIn}>로그인</button>
             </form>
             <li><Link to ="/signUp"> 회원가입 </Link> </li>
