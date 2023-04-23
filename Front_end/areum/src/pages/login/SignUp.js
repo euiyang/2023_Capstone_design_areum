@@ -138,7 +138,8 @@ function SignUp(){
         e.preventDefault();
         if(cmpCode===code){
             setAnswerCode("인증이 완료되었습니다");
-            setEmailState(true);
+            setCheckEmail(true);
+            setEmailState(true);//email 수정 불가능하게
         }
     }
 

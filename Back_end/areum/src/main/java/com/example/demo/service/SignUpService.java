@@ -4,8 +4,10 @@ import com.example.demo.dto.SignUpDto;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -15,7 +17,7 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class SignUpService {
     private final MemberJpaRepository memberRepository;
-    private final JavaMailSender jms;
+    private final JavaMailSender jms=new JavaMailSenderImpl();
 
     public String createVerifyCode(){
         String code="";
@@ -40,18 +42,24 @@ public class SignUpService {
         msg.setTo(email);
         msg.setSubject("areum varifying code");
         msg.setText(code);
-        jms.send(msg);
+        try{
+            jms.send(msg);
+        }catch(MailException e){
+            System.out.println(e);
+        }
+
         return code;
     }
 
     public void join(SignUpDto signUpDto){
-        Member member = new Member();
-        member.setMemberId(signUpDto.getId());
-        member.setMemberPw(signUpDto.getPw());
-        member.setName(signUpDto.getName());
-        member.setEmail(signUpDto.getEmail());
-        member.setPhone(signUpDto.getPhone());
-        member.setMajor(signUpDto.getMajor());
+        Member member = Member.builder()
+                .memberId(signUpDto.getId())
+                .memberPw(signUpDto.getPw())
+                .email(signUpDto.getEmail())
+                .phone(signUpDto.getPhone())
+                .major(signUpDto.getMajor())
+                .name(signUpDto.getName())
+                .build();
         memberRepository.save(member);
     }
 
