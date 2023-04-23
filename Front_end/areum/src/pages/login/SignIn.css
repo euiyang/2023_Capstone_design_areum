@@ -1,0 +1,40 @@
+.signIn {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+  }
+
+  form {
+    background-color: #b0bed0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  button {
+    background-color: #7f8690;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 120px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #256ce1;
+  }
+  
