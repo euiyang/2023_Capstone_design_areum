@@ -26,18 +26,46 @@ function Group() {
         </div>
         <div className="right-container">
     <div className="search-bar">검색 바</div>
+
     <div className="content123">
-        <h2>동아리</h2>
-        <a href="/club" class="more-link">더보기</a>
-        <hr className="content-divider" />
-        <ul>
-            <li><a href="/group/content-1">Content 1</a></li>
-            <li><a href="/group/content-2">Content 2</a></li>
-            <li><a href="/group/content-3">Content 3</a></li>
-        </ul> 
-    </div>
-    </div>
-    </div>
+            <div className="top-content">
+              <div className="top-content-header">
+                <h2>동아리</h2>
+                <hr />
+                <p>총 12 개</p>
+              </div>
+              <hr className="content-divider" />
+            </div>
+            <div className="contents">
+              <div className="group-content">
+                <h4>게시글 제목 1</h4>
+                <h8>게시글 내용 1</h8>
+                <hr className="content-divider" />
+              </div>
+              <div className="group-content">
+              <h4>게시글 제목 2</h4>
+                <h8>게시글 내용 2</h8>
+                <hr className="content-divider" />
+              </div>
+              <div className="group-content">
+              <h4>게시글 제목 3</h4>
+                <h8>게시글 내용 3</h8>
+                <hr className="content-divider" />
+              </div>
+              <div className="group-content">
+              <h4>게시글 제목 4</h4>
+                <h8>게시글 내용 4</h8>
+                <hr className="content-divider" />
+              </div>
+              <div className="group-content">
+              <h4>게시글 제목 5</h4>
+                <h8>게시글 내용 5</h8>
+                <hr className="content-divider" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
