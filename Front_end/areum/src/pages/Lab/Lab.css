@@ -56,7 +56,7 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #3f51b5;
+  background-color: #4453b3;
   color: #fff;
   cursor: pointer;
 }
@@ -144,9 +144,21 @@
     width: 100%;
   }
   
-  .content123 h2 {
-    margin-bottom: 10px;
+  .content123 h4 {
+    margin-top: 50px;
+    margin-bottom: 0px;
   }
+
+  .content123 h2 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .content123 h8 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
 
   ul {
     display: flex;
@@ -167,7 +179,7 @@
     margin-left: auto; 
     display: block; 
     width: fit-content; 
-  
+    margin-bottom: -10px;
   }
   
   .top-content {

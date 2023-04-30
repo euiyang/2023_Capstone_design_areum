@@ -40,24 +40,29 @@ function Lab() {
             </div>
             <div className="contents">
               <div className="lab-content">
-                <h3>게시글 제목 1</h3>
-                <p>게시글 내용 1</p>
+                <h4>게시글 제목 1</h4>
+                <h8>게시글 내용 1</h8>
+                <hr className="content-divider" />
               </div>
               <div className="lab-content">
-                <h3>게시글 제목 2</h3>
-                <p>게시글 내용 2</p>
+              <h4>게시글 제목 2</h4>
+                <h8>게시글 내용 2</h8>
+                <hr className="content-divider" />
               </div>
               <div className="lab-content">
-                <h3>게시글 제목 3</h3>
-                <p>게시글 내용 3</p>
+              <h4>게시글 제목 3</h4>
+                <h8>게시글 내용 3</h8>
+                <hr className="content-divider" />
               </div>
               <div className="lab-content">
-                <h3>게시글 제목 4</h3>
-                <p>게시글 내용 4</p>
+              <h4>게시글 제목 4</h4>
+                <h8>게시글 내용 4</h8>
+                <hr className="content-divider" />
               </div>
               <div className="lab-content">
-                <h3>게시글 제목 5</h3>
-                <p>게시글 내용 5</p>
+              <h4>게시글 제목 5</h4>
+                <h8>게시글 내용 5</h8>
+                <hr className="content-divider" />
               </div>
             </div>
           </div>
