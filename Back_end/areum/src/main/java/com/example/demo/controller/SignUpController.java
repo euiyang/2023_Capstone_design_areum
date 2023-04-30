@@ -28,9 +28,4 @@ public class SignUpController {
         signUpService.join(signUpDto);
     }
 
-//    @PostMapping("/signUp/email/valid")
-//    public String checkEmail(@RequestParam("code") String code){
-//        if(memberService.checkCodeValid(code)) return "success";
-//        else return "fail";
-//    }
 }
