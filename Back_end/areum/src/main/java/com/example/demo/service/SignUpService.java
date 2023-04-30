@@ -3,11 +3,13 @@ package com.example.demo.service;
 import com.example.demo.dto.SignUpDto;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
+import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -17,7 +19,7 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class SignUpService {
     private final MemberJpaRepository memberRepository;
-    private final JavaMailSender jms=new JavaMailSenderImpl();
+    private final JavaMailSender javaMailSender;
 
     public String createVerifyCode(){
         String code="";
@@ -43,7 +45,7 @@ public class SignUpService {
         msg.setSubject("areum varifying code");
         msg.setText(code);
         try{
-            jms.send(msg);
+            javaMailSender.send(msg);
         }catch(MailException e){
             System.out.println(e);
         }
