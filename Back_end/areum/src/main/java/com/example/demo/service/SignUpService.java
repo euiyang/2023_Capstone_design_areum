@@ -3,15 +3,12 @@ package com.example.demo.service;
 import com.example.demo.dto.SignUpDto;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
-import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
-import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
+import java.util.Properties;
 import java.util.Random;
 
 
@@ -19,7 +16,7 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class SignUpService {
     private final MemberJpaRepository memberRepository;
-    private final JavaMailSender javaMailSender;
+    private final JavaMailSenderImpl mailSender;
 
     public String createVerifyCode(){
         String code="";
@@ -39,16 +36,21 @@ public class SignUpService {
 
     public String sendCode(String email){
         String code=createVerifyCode();
+
+        mailSender.setHost("smtp.gmail.com");
+        mailSender.setPort(587);
+        mailSender.setUsername("officialareum9798@gmail.com");
+        mailSender.setPassword("cupcihhrkptfufki");
+        Properties prop = mailSender.getJavaMailProperties();
+        prop.put("mail.smtp.starttls.enable","true");
+
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setFrom("officialareum9798@gmail.com");
         msg.setTo(email);
         msg.setSubject("areum varifying code");
         msg.setText(code);
-        try{
-            javaMailSender.send(msg);
-        }catch(MailException e){
-            System.out.println(e);
-        }
+
+        mailSender.send(msg);
 
         return code;
     }
@@ -64,10 +66,5 @@ public class SignUpService {
                 .build();
         memberRepository.save(member);
     }
-
-//    public boolean checkCodeValid(String code){
-//
-//
-//    }
 
 }
