@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "./Home.css";
 
 function Home(){
+    const [searchText, setSearchText] = useState("");
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(searchText);
+  };
     return (
         <div className='home'>
             <div className="header">
@@ -22,11 +28,32 @@ function Home(){
     </div>
     <div class="header-content">
         
-        <div className="left-container">
-        <div className="login-box">로그인 박스</div>
-        </div>
+    <div className="left-container">
+<div className="login-box">
+  <div className="profile">
+    <div className="profile-circle"></div>
+    <span>로그인하세요.</span>
+  </div>
+  <div className="login-button">
+  <Link to ="signIn">
+    <button>로그인</button>
+    </Link>
+  </div>
+</div>
+</div>
+
         <div className="right-container">
-    <div className="search-bar">검색 바</div>
+
+        <form onSubmit={handleSearch}>
+            <input
+              type="text"
+              placeholder="# 모임 검색"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <button type="submit">검색</button>
+          </form>
+
     
     <div className="content123">
         <h4>[ 스터디 ] 같이 공부해요 </h4>

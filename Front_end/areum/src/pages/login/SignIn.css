@@ -1,6 +1,6 @@
 .signIn {
     width: 400px;
-    height: 300px;
+    height: 400px;
     padding: 20px;
     margin: auto;
     display: flex;
@@ -10,8 +10,8 @@
     border: 1px solid #dcdcdc;
   }
 
-  form {
-    background-color: #b0bed0;
+  .signIn form {
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,22 +19,41 @@
     gap: 10px;
   }
   
-  li {
-    display: inline;
-    margin-right: 10px;
+  .form h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  button {
+
+  .signIn li {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .signIn li input{
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .signIn button {
+    display: block;
+    width: 300px;
+    padding: 10px;
     background-color: #7f8690;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 8px 120px;
+    font-size: 16px;
+    line-height: 1.5;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease;
   }
   
   button:hover {
-    background-color: #256ce1;
+    background-color: #d0d5dd;
   }
   

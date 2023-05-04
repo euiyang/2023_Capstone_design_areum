@@ -34,6 +34,7 @@ function SignIn(){
     return(
         <div className='signIn'>
             <form>
+                <h2>로그인</h2>
                 <li>아이디:  <input type="text" ref={idRef}></input></li>
                 <li>비밀번호:<input type="password" ref={pwRef}></input></li>
                 <button onClick={handleSignIn}>로그인</button>
