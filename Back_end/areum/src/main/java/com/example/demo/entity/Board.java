@@ -9,7 +9,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Table(name="page")
+@Table(name="board")
 public class Board {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
