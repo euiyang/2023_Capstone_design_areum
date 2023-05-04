@@ -20,7 +20,16 @@ public class BoardService {
 
     public String viewBoard(BoardDto boardDto){
         Optional<Board> board = boardRepository.findById(boardDto.getId());
-        return null; //should be fixed
+        return board.map(this::boardToString).orElse("not found");
+    }
+
+    private String boardToString(Board board) {
+        return "Board{" +
+                "id=" + board.getId() +
+                ", timeStamp=" + board.getTimeStamp() +
+                ", pageName='" + board.getPageName() + '\'' +
+                ", pageBody='" + board.getPageBody() + '\'' +
+                '}';
     }
 
 }
