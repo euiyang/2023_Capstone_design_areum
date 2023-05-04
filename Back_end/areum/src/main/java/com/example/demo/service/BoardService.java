@@ -18,9 +18,12 @@ public class BoardService {
 
     private final BoardJpaRepository boardRepository;
 
-    public String viewBoard(BoardDto boardDto){
-        Optional<Board> board = boardRepository.findById(boardDto.getId());
-        return null; //should be fixed
+    public BoardDto viewBoard(Long id){
+        Optional<Board> board = boardRepository.findById(id);
+        BoardDto boardDto = new BoardDto();
+        boardDto.setTimeStamp(board.get().getTimeStamp());
+        boardDto.setPageBody(board.get().getPageBody());
+        boardDto.setPageName(board.get().getPageName());
+        return boardDto;
     }
-
 }

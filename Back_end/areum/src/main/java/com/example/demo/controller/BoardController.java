@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.*;
 public class BoardController {
 
     private final BoardService boardService;
-    BoardDto boardDto;
 
-    @RequestMapping("/request-param/{path}")
-    public String requestParam(@PathVariable("path") String path) {
-        return null; // should be fixed
+    @GetMapping("/request-param/{pageId}")
+    public Object requestParam(@PathVariable("pageId") Long id) {
+        return boardService.viewBoard(id);
     }
 
 }
