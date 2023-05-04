@@ -36,7 +36,7 @@ class SignUpServiceTest {
         msg.setText("123456");
 
         mailSender.send(msg);
-    }
 
+    }
 
 }

@@ -21,6 +21,7 @@ public class MemberJpaRepositoryTest {
 
 
     @Test
+    //@Rollback(false)
     public void check(){
         Member member=Member.builder()
                 .memberId("qwe")
