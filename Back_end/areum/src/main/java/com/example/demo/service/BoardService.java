@@ -19,7 +19,7 @@ public class BoardService {
     private final BoardJpaRepository boardRepository;
 
     public String viewBoard(BoardDto boardDto){
-        List<Board> board = boardRepository.findByPath(boardDto.getPagePath());
+        Optional<Board> board = boardRepository.findById(boardDto.getId());
         return null; //should be fixed
     }
 

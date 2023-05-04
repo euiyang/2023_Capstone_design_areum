@@ -14,8 +14,8 @@ public class Board {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Date timeStamp;
     private String pageName;
-    private String pagePath;
-    private Date pageTimeStamp;
+    private String pageBody;
 }
 

@@ -7,7 +7,7 @@ import java.util.Date;
 @Data
 public class BoardDto {
     private Long id;
+    private Date timeStamp;
     private String pageName;
-    private String pagePath;
-    private Date pageTimeStamp;
+    private String pageBody;
 }
