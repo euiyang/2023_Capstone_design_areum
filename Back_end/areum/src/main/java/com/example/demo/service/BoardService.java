@@ -30,6 +30,13 @@ public class BoardService {
                 ", pageName='" + board.getPageName() + '\'' +
                 ", pageBody='" + board.getPageBody() + '\'' +
                 '}';
+                
+    public BoardDto viewBoard(Long id){
+        Optional<Board> board = boardRepository.findById(id);
+        BoardDto boardDto = new BoardDto();
+        boardDto.setTimeStamp(board.get().getTimeStamp());
+        boardDto.setPageBody(board.get().getPageBody());
+        boardDto.setPageName(board.get().getPageName());
+        return boardDto;
     }
-
 }

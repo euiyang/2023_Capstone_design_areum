@@ -11,9 +11,9 @@ public class BoardController {
 
     private final BoardService boardService;
 
-    @GetMapping("/board/{id}")
-    public String viewBoard(@PathVariable Long id) {
-        BoardDto boardDto = new BoardDto(id);
-        return boardService.viewBoard(boardDto);
+
+    @GetMapping("/request-param/{pageId}")
+    public Object requestParam(@PathVariable("pageId") Long id) {
+        return boardService.viewBoard(id);
     }
 }
