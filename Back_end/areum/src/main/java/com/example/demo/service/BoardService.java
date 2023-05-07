@@ -17,19 +17,6 @@ import java.util.Optional;
 public class BoardService {
 
     private final BoardJpaRepository boardRepository;
-
-    public String viewBoard(BoardDto boardDto){
-        Optional<Board> board = boardRepository.findById(boardDto.getId());
-        return board.map(this::boardToString).orElse("not found");
-    }
-
-    private String boardToString(Board board) {
-        return "Board{" +
-                "id=" + board.getId() +
-                ", timeStamp=" + board.getTimeStamp() +
-                ", pageName='" + board.getPageName() + '\'' +
-                ", pageBody='" + board.getPageBody() + '\'' +
-                '}';
                 
     public BoardDto viewBoard(Long id){
         Optional<Board> board = boardRepository.findById(id);

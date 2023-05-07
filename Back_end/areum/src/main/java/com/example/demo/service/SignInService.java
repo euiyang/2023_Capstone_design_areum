@@ -3,7 +3,9 @@ package com.example.demo.service;
 import com.example.demo.dto.SignInDto;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
+import com.example.demo.security.TokenProvider;
 import lombok.RequiredArgsConstructor;
+import org.apache.el.parser.Token;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -18,10 +20,11 @@ public class SignInService {
         Optional<Member> member = memberRepository.findByMemberId(signInDto.getId());
 
         if(member.isPresent()){
-            if(member.get().getMemberPw().equals(signInDto.getPw())) return "success";
-            else return "pwFail";
-        }else{
-            return "idFail";
+            TokenProvider tp = new TokenProvider();
+            if(member.get().getMemberPw().equals(signInDto.getPw())) {
+                return tp.create(signInDto.getId());
+            }
         }
+        return "fail";
     }
 }
