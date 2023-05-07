@@ -35,22 +35,9 @@ dependencies {
 
 	//security
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-
 	implementation 'org.springframework.boot:spring-boot-starter'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-	dependencies {
-
-		//추후 DB연동시 주석 해재 후 작업 필요
-		//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-		//스프링 시큐리티 로그인오류 주석
-//		implementation 'org.springframework.boot:spring-boot-starter-security'
-//		implementation 'org.springframework.boot:spring-boot-starter-web'
-//		implementation 'org.springframework.boot:spring-boot-starter-websocket'
-//		implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-	}
 
 	//jwt인증인가
 	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
