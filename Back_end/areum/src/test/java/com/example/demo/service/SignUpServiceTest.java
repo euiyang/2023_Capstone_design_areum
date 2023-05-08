@@ -14,9 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@RequiredArgsConstructor
 class SignUpServiceTest {
-
 
     private JavaMailSenderImpl mailSender=new JavaMailSenderImpl();
 
@@ -44,7 +42,6 @@ class SignUpServiceTest {
         msg.setText("123456");
 
         mailSender.send(msg);
-
     }
 
 }

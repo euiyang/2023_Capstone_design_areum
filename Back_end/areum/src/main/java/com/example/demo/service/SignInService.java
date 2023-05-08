@@ -5,7 +5,6 @@ import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
 import com.example.demo.security.TokenProvider;
 import lombok.RequiredArgsConstructor;
-import org.apache.el.parser.Token;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
