@@ -26,12 +26,11 @@ function SignIn(){
                 })
                 .then((res)=>{
                     
-                    if(res.data.value==="success"){
-                        //token
-                    }else if(res.data.value==="idFail"){
-                        alert("존재하지 않는 id입니다");
-                    }else{
-                        alert("잘못된 pw입니다.");
+                    if(res.data.value==="fail"){
+                        alert("id 또는 pw가 잘못되었습니다");
+                    }else {
+                        alert("환영합니다");
+                        //token and user object
                     }
                 })
             }catch(error){

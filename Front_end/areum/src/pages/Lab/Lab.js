@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 import "./Lab.css";
 
 function Lab() {
+
+  const handleBoard=async(e)=>{
+    //id, pw 빈칸 검증
+    e.preventDefault();
+    try{
+        await axios
+        .get("http://localhost:8080/lab")
+        .then((res)=>{
+            
+        })
+    }catch(error){
+        console.log(error);
+    }
+    
+}
+
   return (
     <div className='home'>
     <div className="header">
