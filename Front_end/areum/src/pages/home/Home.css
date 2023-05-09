@@ -4,6 +4,12 @@
   padding: 20px;
 }
 
+.logo{
+  width: 130px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

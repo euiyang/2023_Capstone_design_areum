@@ -12,17 +12,17 @@ function Group() {
   return (
     <div className='group'>
             <div className="header">
-            <Link to="/"><h1>Logo</h1></Link>
+            <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
                 <ui className="header-menu">
                 <li><Link to="/Lab" style={{ textDecoration: "none" }}> 연구실 </Link></li>
                  <li><Link to="/Group" style={{ textDecoration: "none" }}> 동아리 </Link></li>
                  <li><Link to="/Study" style={{ textDecoration: "none" }}> 스터디 </Link></li>
                 </ui>
         <div className="header-buttons">
-            <Link to ="signIn">
+            <Link to ="/signIn">
             <button className="signin-btn">로그인</button>
             </Link>
-            <Link to ="signUp">
+            <Link to ="/signUp">
             <button className="signup-btn">회원가입</button>
             </Link>
         </div>
@@ -35,7 +35,7 @@ function Group() {
     <span>로그인하세요.</span>
   </div>
   <div className="login-button">
-  <Link to ="signIn">
+  <Link to ="/signIn">
     <button>로그인</button>
     </Link>
   </div>
