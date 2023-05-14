@@ -10,6 +10,7 @@ function Home(){
   };
     return (
         <div className='home'>
+
             <div className="header">
             <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
                 <ui className="header-menu">
