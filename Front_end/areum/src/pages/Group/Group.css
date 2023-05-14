@@ -97,19 +97,6 @@
   margin-left: 0%;
   padding: 20px;
 }
-
-.search-bar {
-  flex-grow: 1;
-  width: 100%;
-  height: 30px;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  margin-top: 20px;
-  margin-bottom: 20px; /* 검색바와 컨텐츠 사이 간격 */
-}
   
   .contents {
     display: flex;
@@ -135,7 +122,46 @@
     padding: 0 10px;
   }  
 
+  .group form {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* 검색바와 컨텐츠 사이 간격 */
+  }
   
+  .group form input[type="text"] {
+    flex-grow: 1;
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+  }
+  
+  .group form button[type="submit"]  {
+    background-color: #868893;
+    display: flex;
+    color: #fff;
+    border: none;
+    padding: 4px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .group form button:hover {
+    background-color: #ccc;
+  }
+
   .content123 ul
   {
     list-style: none;

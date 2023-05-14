@@ -52,10 +52,10 @@ function SignIn(){
     return(
         <div className='signIn'>
             <form>
-                <li>id:<input type="text" onChange={e=>setId(e.target.value)}></input></li>
-                <li>password:<input type="password" onChange={e=>setPw(e.target.value)}></input></li>
+                <h2>로그인</h2>
+                <li>아이디:<input type="text" onChange={e=>setId(e.target.value)}></input></li>
+                <li>비밀번호:<input type="password" onChange={e=>setPw(e.target.value)}></input></li>
                 <li>{answer}</li>
-
                 <button onClick={handleSignIn}>로그인</button>
             </form>
             <li><Link to ="/signUp"> 회원가입 </Link> </li>
