@@ -19,13 +19,13 @@ public class BoardController {
         return boardService.viewBoard(id);
     }
 
-//    @GetMapping("/lab")
-//    public List<Board> getLabList(){
-//        return boardService.getLabList();
-//    }
-//
-//    @GetMapping("/club")
-//    public List<Board> getClubList(){
-//        return boardService.getClubList();
-//    }
+    @GetMapping("/lab")
+    public List<Board> getLabList(){
+        return boardService.getLabList();
+    }
+    @GetMapping("/club")
+    public List<Board> getClubList(){
+        return boardService.getClubList();
+    }
+
 }

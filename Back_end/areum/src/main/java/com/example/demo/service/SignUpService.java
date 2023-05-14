@@ -4,12 +4,10 @@ import com.example.demo.dto.SignUpDto;
 import com.example.demo.entity.Member;
 import com.example.demo.repository.MemberJpaRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
-import java.util.Properties;
 import java.util.Random;
 
 
@@ -18,12 +16,6 @@ import java.util.Random;
 public class SignUpService {
     private final MemberJpaRepository memberRepository;
     private final JavaMailSenderImpl mailSender;
-
-    @Value("${spring.mail.username}")
-    private String username;
-
-    @Value("${spring.mail.password}")
-    private String password;
 
     public String createVerifyCode(){
         String code="";
@@ -43,15 +35,6 @@ public class SignUpService {
 
     public String sendCode(String email){
         String code=createVerifyCode();
-
-        Properties prop = mailSender.getJavaMailProperties();
-        prop.put("mail.smtp.starttls.enable","true");
-        prop.put("mail.smtp.auth","true");
-
-        mailSender.setHost("smtp.gmail.com");
-        mailSender.setPort(587);
-        mailSender.setUsername(username);
-        mailSender.setPassword(password);
 
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setFrom("officialareum9798@gmail.com");
