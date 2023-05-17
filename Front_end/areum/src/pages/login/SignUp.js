@@ -49,10 +49,10 @@ function SignUp(){
         <div className='signUp'>
             <form>
                 <li>아이디:<input type="text" ref={idRef}></input></li>
-                <button onClick={handleId}>아이디 중복 확인</button>
+                <button1 onClick={handleId}>아이디 중복 확인</button1>
                 <li>비밀번호:<input type="password" ref={pwRef}></input></li>
                 <li>비밀번호 확인:<input type="password" ref={pwRecRef}></input></li>
-                <button onClick={handlePw}>비밀번호 중복 확인</button>
+                <button1 onClick={handlePw}>비밀번호 중복 확인</button1>
             
                 <li>이름:<input type="text" ref={nameRef}></input></li> 
                 <li>전화번호:<input type="tel" ref={phoneNumRef}></input></li>
