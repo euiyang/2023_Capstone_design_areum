@@ -1,16 +1,61 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Home.css";
 
-function Home(){
-    const [searchText, setSearchText] = useState("");
+function Home2(){
+
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [isPasswordMatch, setIsPasswordMatch] = useState(true);
+  const [name, setName] = useState("");
+  const nameRef = useRef(); 
+  const emailRef = useRef();
+  const departmentRef = useRef();
+  const gradeRef = useRef();
+  const [photo, setPhoto] = useState(null);
+
+  const handlePhotoUpload = (event) => {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+  
+      reader.onload = () => {
+        setPhoto(reader.result);
+      };
+  
+      reader.readAsDataURL(file);
+    };
+  
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // 비밀번호와 비밀번호 확인이 일치하는지 확인
+    if (password !== confirmPassword) {
+      setIsPasswordMatch(false);
+      return;
+  }
+
+  // 이름 저장 로직
+  // 예시로 name 상태로 저장한다고 가정
+  const nameValue = nameRef.current.value;
+  setName(nameValue);
+};
+
+  const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(searchText);
   };
+
     return (
         <div className='home'>
-
             <div className="header">
             <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
                 <ui className="header-menu">
@@ -19,27 +64,38 @@ function Home(){
                  <li><Link to="/Study" style={{ textDecoration: "none" }}> 스터디 </Link></li>
                 </ui>
         <div className="header-buttons">
-            <Link to ="/signIn">
-            <button className="signin-btn">로그인</button>
+            <Link to ="/MyPage">
+            <button className="signin-btn">마이페이지</button>
             </Link>
             <Link to ="/signUp">
-            <button className="signup-btn">회원가입</button>
+            <button className="signup-btn">로그아웃</button>
             </Link>
         </div>
     </div>
     <div class="header-content">
         
     <div className="left-container">
+
+<div className="container">
 <div className="login-box">
   <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
+    <div className="profile-circle">
+    {photo && <img className="profile-photo" src={photo} alt="Profile" />}
+    </div>
+    <span>{name}</span>
   </div>
-  <div className="login-button">
-  <Link to ="/signIn">
-    <button>로그인</button>
+  <div className="MP-button">
+  <Link to ="/MyPage">
+    <button>내정보수정</button>
     </Link>
   </div>
+</div>
+
+<div className="application-box">
+  <h4>지원 현황</h4>
+  <ul>
+  </ul>
+</div>
 </div>
 </div>
 
@@ -95,4 +151,5 @@ function Home(){
     );
 }
 
-export default Home;
+export default Home2;
+

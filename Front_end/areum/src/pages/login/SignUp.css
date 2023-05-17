@@ -21,7 +21,17 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
+}
+
+.signUp li {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .signUp button {
@@ -38,10 +48,29 @@
   transition: all 0.3s ease;
 }
 
+.signUp button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #a3a8ae;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 .signUp button:hover {
   background-color: #d0d5dd;
 }
 
+.signUp button1:hover {
+  background-color: #d0d5dd;
+}
 
 .signUp form {
     display: flex;

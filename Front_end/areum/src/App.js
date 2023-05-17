@@ -9,6 +9,7 @@ import Home from './pages/home/Home.js'
 import Lab from './pages/Lab/Lab.js'
 import Group from './pages/Group/Group.js'
 import Study from './pages/Study/Study.js'
+import MyPage from './pages/MyPage/MyPage.js'
 
 function App() {
   let [user,setUser]=useState({
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Lab" element={<Lab/>}/>
           <Route path="/Group" element={<Group/>}/>
           <Route path="/Study" element={<Study/>}/>
+          <Route path="/MyPage" element={<MyPage/>}/>
         </Routes>
       </BrowserRouter>
       

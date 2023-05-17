@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import './Study.css'
 
-
-
 function Study() {
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {

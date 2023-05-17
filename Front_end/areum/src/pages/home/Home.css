@@ -78,7 +78,6 @@
 
 /* 왼쪽 로그인 박스 */
 .left-container {
-  
   display: flex;
   flex-wrap: wrap; /* 영역이 넘쳤을 경우 다음줄로 넘어가도록 설정 */
   justify-content: space-between;
@@ -95,6 +94,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-left: -10px; 
 }
 
 .profile {
@@ -108,8 +108,19 @@
   width: 48px;
   height: 48px;
   margin-right: 10px;
-  background-color: #868893;
   border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 span {
@@ -137,6 +148,79 @@ span {
 .login-button button:hover {
   background-color: #ccc;
 }
+
+/* home2 -> MyPage 내 정보 수정 버튼 */
+.MP-button {
+  margin-top: 0rem;
+}
+
+.MP-button button {
+  width: 180px ;
+  margin-bottom: 20px;
+  background-color: #868893;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.MP-button button:hover {
+  background-color: #ccc;
+}
+
+/* 지원현황 박스 */
+
+.application-box {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-left: -10px; 
+}
+
+.application-box h4 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.application-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.application-box li {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.application-box li:last-child {
+  margin-bottom: 0;
+}
+
+.application-box a {
+  text-decoration: none;
+  color: #333;
+}
+
+.application-box a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* 오른쪽 컨테이너 */
 .right-container{

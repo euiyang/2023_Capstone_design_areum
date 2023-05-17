@@ -178,7 +178,6 @@ function SignUp(){
                 <li>이름:<input type="text" onChange={e=>setName(e.target.value)}></input></li> 
                 <li>전화번호:<input type="tel" onChange={e=>setPhoneNum(e.target.value)}></input></li>
                 <li>학과:<input type="text" onChange={e=>setDep(e.target.value)}></input></li>
-
                 <button onClick={handleSignUp}>회원가입</button>
             </form>
         </div>
