@@ -82,8 +82,6 @@ function MyPage() {
   )}
 </div>
 
-
-
         <form onSubmit={handleSubmit}>
           <div className="input-section">
             <label htmlFor="name">이름</label>

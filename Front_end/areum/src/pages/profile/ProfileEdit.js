@@ -1,8 +1,11 @@
 import {useState} from "react";
 import Select from "react-select";
 
-function ProfileEdit(){
+function ProfileEdit({user, onSave}){
 
+    //user 객체를 전달하여 필드값 초기화 + 
+    //onSave 함수도 전달하여 수정된 데이터 저장
+    
     const[name,setName]=useState(user.name);
     const[status,setStatus]=useState(user.status);
     const[studentNum,setStudentNum]=useState(user.studentNum);

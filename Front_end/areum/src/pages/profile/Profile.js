@@ -1,4 +1,7 @@
-function Profile(){
+function Profile({user}){
+    
+    //user 객체를 프로퍼티로 받아옴
+
     return (
         <div className='profile'>
             <h1>student profile</h1>
