@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./Lab.css";
 import CustomHeader from "../../components/CustomHeader";
 import Contents from "../../components/Contents";
+import { Link } from "react-router-dom";
 
 function Lab() {
   const [posts,setPosts]=useState([]);
@@ -11,7 +12,6 @@ function Lab() {
     e.preventDefault();
     console.log(searchText);
   };
-
 
   useEffect(()=>{
     fetchPageData();
@@ -33,18 +33,18 @@ function Lab() {
     <div class="header-content">
 
       <div className="left-container">
-      <div className="login-box">
-        <div className="profile">
-          <div className="profile-circle"></div>
-          <span>로그인하세요.</span>
+        <div className="login-box">
+          <div className="profile">
+            <div className="profile-circle"></div>
+            <span>로그인하세요.</span>
+          </div>
+          <div className="login-button">
+          <Link to ="/signIn">
+            <button>로그인</button>
+            </Link>
+          </div>
         </div>
-        <div className="login-button">
-        <Link to ="/signIn">
-          <button>로그인</button>
-          </Link>
         </div>
-      </div>
-      </div>
 
       <div className="right-container">
       <form onSubmit={handleSearch}>
@@ -56,15 +56,7 @@ function Lab() {
             />
             <button type="submit">검색</button>
           </form>
-      </div>
-
-
-      <div class="header-content">
-        <div className="left-container">
-        <div className="login-box">로그인 박스</div>
-        </div>
-        <div className="right-container">
-          <div className="search-bar">검색 바</div>
+      
           <div className="content123">
             <div className="top-content">
               <div className="top-content-header">
@@ -78,9 +70,9 @@ function Lab() {
             
           </div>
         </div>
+
       </div>
-    </div>
-    </div>
+      </div>
   );
 }
 
