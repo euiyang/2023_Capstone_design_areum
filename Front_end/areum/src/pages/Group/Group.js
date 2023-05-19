@@ -1,9 +1,9 @@
-
 import React, { useState,useEffect } from "react";
 import axios from 'axios';
 import "./Group.css";
 import CustomHeader from "../../components/CustomHeader";
 import Contents from "../../components/Contents";
+import { Link } from "react-router-dom";
 
 function Group() {
   const [posts,setPosts]=useState([]);
@@ -19,6 +19,7 @@ function Group() {
     }catch(error){
         console.log(error);
     }
+  };
     
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
@@ -26,23 +27,25 @@ function Group() {
     console.log(searchText);
   };
 
+
   return (
     <div className='group'>
     <CustomHeader/>            
     <div class="header-content">
-    <div className="left-container">
-<div className="login-box">
-  <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
-  </div>
-  <div className="login-button">
-  <Link to ="/signIn">
-    <button>로그인</button>
-    </Link>
-  </div>
-</div>
-</div>
+      
+        <div className="left-container">
+        <div className="login-box">
+          <div className="profile">
+            <div className="profile-circle"></div>
+            <span>로그인하세요.</span>
+          </div>
+          <div className="login-button">
+          <Link to ="/signIn">
+            <button>로그인</button>
+            </Link>
+          </div>
+        </div>
+    </div>
 
         <div className="right-container">
 
