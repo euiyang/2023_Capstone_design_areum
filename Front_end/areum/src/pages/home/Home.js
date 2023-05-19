@@ -1,32 +1,33 @@
+import React, { useState,useEffect } from "react";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./Home.css";
+import CustomHeader from "../../components/CustomHeader";
 
 function Home(){
+    useEffect(()=>{
+        fetchPageData();
+      },[]);
+    
+      const fetchPageData= async()=>{
+        try{
+          const res=await axios.get('http://localhost:8080')
+          
+        }catch(error){
+            console.log(error);
+        }
+      };
+
     const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(searchText);
   };
     return (
-        <div className='home'>
+    <div className='home'>
 
-            <div className="header">
-            <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
-                <ui className="header-menu">
-                 <li><Link to="/Lab" style={{ textDecoration: "none" }}> 연구실 </Link></li>
-                 <li><Link to="/Group" style={{ textDecoration: "none" }}> 동아리 </Link></li>
-                 <li><Link to="/Study" style={{ textDecoration: "none" }}> 스터디 </Link></li>
-                </ui>
-        <div className="header-buttons">
-            <Link to ="/signIn">
-            <button className="signin-btn">로그인</button>
-            </Link>
-            <Link to ="/signUp">
-            <button className="signup-btn">회원가입</button>
-            </Link>
-        </div>
-    </div>
+            <CustomHeader/>
     <div class="header-content">
         
     <div className="left-container">
@@ -44,6 +45,7 @@ function Home(){
 </div>
 
         <div className="right-container">
+        <div className="search-bar">검색 바</div>
 
         <form onSubmit={handleSearch}>
             <input
@@ -54,7 +56,6 @@ function Home(){
             />
             <button type="submit">검색</button>
           </form>
-
     
     <div className="content123">
         <h4>[ 스터디 ] 같이 공부해요 </h4>

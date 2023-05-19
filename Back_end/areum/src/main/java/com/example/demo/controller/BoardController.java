@@ -14,6 +14,11 @@ public class BoardController {
 
     private final BoardService boardService;
 
+//    @GetMapping("/")
+//    public List<Board> getAll(){
+//        return boardService.getAll();
+//    }
+
     @GetMapping("/board/{pageId}")
     public BoardDto requestParam(@PathVariable("pageId") Long id) {
         return boardService.viewBoard(id);
