@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Select from "react-select";
 
-function ProfileEdit(){
+function ProfileEdit({user, onSave}){
 
     // const[name,setName]=useState(user.name);
     // const[status,setStatus]=useState(user.status);
@@ -47,6 +47,7 @@ function ProfileEdit(){
     //         <button onClick={handleSave}>send</button>
     //     </div>
     // );
+
 }
 
 export default ProfileEdit;

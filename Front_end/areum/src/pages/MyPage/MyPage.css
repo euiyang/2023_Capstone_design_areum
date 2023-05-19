@@ -1,0 +1,209 @@
+.MyPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .logo{
+    width: 130px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .header h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .header-menu li {
+    margin-right: 20px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+.signin-btn {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #868893;
+    color: #fff;
+    cursor: pointer;
+}
+  
+.signup-btn {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4453b3;
+    color: #fff;
+    cursor: pointer;
+}
+    
+.content-divider {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+      margin-bottom: 10px;
+}
+    
+.more-link {
+      font-size: 0.8rem; 
+      margin-left: auto; 
+      display: block; 
+      width: fit-content; 
+      margin-bottom: -10px;
+}
+
+.mypage-content {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mypage-content h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+}
+
+.input-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+}
+    
+.input-section label {
+      margin-bottom: 5px;
+      font-weight: bold;
+}
+    
+.input-section input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+}
+
+.password-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+}
+    
+.password-section label {
+      margin-bottom: 5px;
+      font-weight: bold;
+}
+    
+.password-section input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+}
+    
+.error-message {
+      color: red;
+      margin-top: 5px;
+}
+
+.save-button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #868893;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      width: fit-content;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+}
+    
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-section input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.uploaded-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-button input {
+  display: none;
+}
+
+.upload-photo:hover {
+  border: 1px solid #999;
+}

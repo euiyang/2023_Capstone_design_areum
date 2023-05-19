@@ -6,6 +6,12 @@ import Contents from "../../components/Contents";
 
 function Lab() {
   const [posts,setPosts]=useState([]);
+  const [searchText, setSearchText] = useState("");
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(searchText);
+  };
+
 
   useEffect(()=>{
     fetchPageData();
@@ -18,11 +24,39 @@ function Lab() {
     }catch(error){
         console.log(error);
     }
+
   };
 
   return (
     <div className='lab'>
     <CustomHeader/>
+<div class="header-content">
+
+<div className="left-container">
+<div className="login-box">
+  <div className="profile">
+    <div className="profile-circle"></div>
+    <span>로그인하세요.</span>
+  </div>
+  <div className="login-button">
+  <Link to ="/signIn">
+    <button>로그인</button>
+    </Link>
+  </div>
+</div>
+</div>
+
+<div className="right-container">
+<form onSubmit={handleSearch}>
+            <input
+              type="text"
+              placeholder="# 모임 검색"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <button type="submit">검색</button>
+          </form>
+
 
       <div class="header-content">
         <div className="left-container">
