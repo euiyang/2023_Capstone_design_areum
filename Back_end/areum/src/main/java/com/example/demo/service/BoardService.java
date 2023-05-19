@@ -10,6 +10,7 @@ import com.example.demo.repository.MemberJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.util.ListUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,4 +42,11 @@ public class BoardService {
         if(clubList.isPresent()) return clubList.get();
         else return new ArrayList<>();
     }
+
+//    public List<Board> getAll() {
+//        Optional<List<Board>> labPost = boardRepository.findThreePost(BoardType.Lab);
+//        Optional<List<Board>> clubPost = boardRepository.findThreePost(BoardType.Club);
+//
+//        return
+//    }
 }
