@@ -30,24 +30,24 @@ function Lab() {
   return (
     <div className='lab'>
     <CustomHeader/>
-<div class="header-content">
+    <div class="header-content">
 
-<div className="left-container">
-<div className="login-box">
-  <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
-  </div>
-  <div className="login-button">
-  <Link to ="/signIn">
-    <button>로그인</button>
-    </Link>
-  </div>
-</div>
-</div>
+      <div className="left-container">
+      <div className="login-box">
+        <div className="profile">
+          <div className="profile-circle"></div>
+          <span>로그인하세요.</span>
+        </div>
+        <div className="login-button">
+        <Link to ="/signIn">
+          <button>로그인</button>
+          </Link>
+        </div>
+      </div>
+      </div>
 
-<div className="right-container">
-<form onSubmit={handleSearch}>
+      <div className="right-container">
+      <form onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="# 모임 검색"
@@ -56,6 +56,7 @@ function Lab() {
             />
             <button type="submit">검색</button>
           </form>
+      </div>
 
 
       <div class="header-content">
@@ -78,6 +79,7 @@ function Lab() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
