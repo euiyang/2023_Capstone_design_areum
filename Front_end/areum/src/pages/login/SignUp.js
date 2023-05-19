@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect,useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import './SignUp.css'
 function SignUp(){
 
