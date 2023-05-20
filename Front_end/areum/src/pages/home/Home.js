@@ -44,7 +44,6 @@ function Home(){
 </div>
 
         <div className="right-container">
-        <div className="search-bar">검색 바</div>
 
         <form onSubmit={handleSearch}>
             <input
