@@ -1,46 +1,51 @@
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import axios from 'axios';
 import "./Group.css";
+import CustomHeader from "../../components/CustomHeader";
+import Contents from "../../components/Contents";
+import { Link } from "react-router-dom";
 
 function Group() {
+  const [posts,setPosts]=useState([]);
+
+  useEffect(()=>{
+    fetchPageData();
+  },[]);
+
+  const fetchPageData= async()=>{
+    try{
+      const res=await axios.get('http://localhost:8080/club')
+      setPosts(res.data);
+    }catch(error){
+        console.log(error);
+    }
+  };
+    
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(searchText);
   };
 
+
   return (
     <div className='group'>
-            <div className="header">
-            <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
-                <ui className="header-menu">
-                <li><Link to="/Lab" style={{ textDecoration: "none" }}> 연구실 </Link></li>
-                 <li><Link to="/Group" style={{ textDecoration: "none" }}> 동아리 </Link></li>
-                 <li><Link to="/Study" style={{ textDecoration: "none" }}> 스터디 </Link></li>
-                </ui>
-        <div className="header-buttons">
-            <Link to ="/signIn">
-            <button className="signin-btn">로그인</button>
+    <CustomHeader/>            
+    <div class="header-content">
+      
+        <div className="left-container">
+        <div className="login-box">
+          <div className="profile">
+            <div className="profile-circle"></div>
+            <span>로그인하세요.</span>
+          </div>
+          <div className="login-button">
+          <Link to ="/signIn">
+            <button>로그인</button>
             </Link>
-            <Link to ="/signUp">
-            <button className="signup-btn">회원가입</button>
-            </Link>
+          </div>
         </div>
     </div>
-    <div class="header-content">
-    <div className="left-container">
-<div className="login-box">
-  <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
-  </div>
-  <div className="login-button">
-  <Link to ="/signIn">
-    <button>로그인</button>
-    </Link>
-  </div>
-</div>
-</div>
 
         <div className="right-container">
 
@@ -63,33 +68,9 @@ function Group() {
               </div>
               <hr className="content-divider" />
             </div>
-            <div className="contents">
-              <div className="group-content">
-                <h4>게시글 제목 1</h4>
-                <h8>게시글 내용 1</h8>
-                <hr className="content-divider" />
-              </div>
-              <div className="group-content">
-              <h4>게시글 제목 2</h4>
-                <h8>게시글 내용 2</h8>
-                <hr className="content-divider" />
-              </div>
-              <div className="group-content">
-              <h4>게시글 제목 3</h4>
-                <h8>게시글 내용 3</h8>
-                <hr className="content-divider" />
-              </div>
-              <div className="group-content">
-              <h4>게시글 제목 4</h4>
-                <h8>게시글 내용 4</h8>
-                <hr className="content-divider" />
-              </div>
-              <div className="group-content">
-              <h4>게시글 제목 5</h4>
-                <h8>게시글 내용 5</h8>
-                <hr className="content-divider" />
-              </div>
-            </div>
+
+            <Contents posts={posts}/>
+            
           </div>
         </div>
       </div>
