@@ -12,10 +12,10 @@ const CustomHeader=()=> {
          <li><Link to="/Study" className="menu-item"> 스터디 </Link></li>
         </ui>
       <div className="header-buttons">
-          <Link to ="signIn">
+          <Link to ="/signIn">
           <button className="signin-btn">로그인</button>
           </Link>
-          <Link to ="signUp">
+          <Link to ="/signUp">
           <button className="signup-btn">회원가입</button>
           </Link>
       </div>

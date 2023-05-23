@@ -312,4 +312,18 @@
       padding: 10px;
     }
     
-  
+    /* 글작성 버튼*/
+    .write-button {
+      background-color: #868893;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left:20px ;
+    }
+    
+    .write-button:hover {
+      background-color: #ccc;
+    }

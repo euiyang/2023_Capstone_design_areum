@@ -64,7 +64,11 @@ function Study() {
               <div className="top-content-header">
                 <h2>스터디</h2>
                 <hr />
-                <p>총 {posts.length} 개</p>              </div>
+                <p>총 {posts.length} 개</p>   
+                <Link to="/Post">
+                  <button className="write-button">글작성</button>
+                </Link>
+           </div>
               <hr className="content-divider" />
             </div>
 
