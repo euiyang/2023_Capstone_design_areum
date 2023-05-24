@@ -64,7 +64,7 @@ return(
               <span className="question-mark-icon" onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
                 ?
               </span>
-              <div className={`tooltip${showTooltip ? " show" : ""}`}>
+              <div className="tooltip">
                 , 혹은 enter 시 3개까지 해시태그 추가가 가능합니다
               </div>
             </div>
