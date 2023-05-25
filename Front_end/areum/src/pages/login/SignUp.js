@@ -144,44 +144,66 @@ function SignUp(){
         }
     }
 
-    return(
-        <div className='signUp'>
-            <form>
-                <li>
-                    아이디:
-                    <input type="text"onChange={e=>setId(e.target.value)}></input>
-                    <button onClick={handleId}>아이디 중복 확인</button>
-                </li>
-                <li>{answerId}</li>
+return (
+  <div className='signUp'>
+    <form>
+        <h2>회원가입</h2>
+      <li>
+        <label htmlFor="id">아이디:</label>
+        <input type="text" id="id" onChange={e => setId(e.target.value)} />
+        </li>
+        <button1 onClick={handleId}>아이디 중복 확인</button1>
+      <li>{answerId}</li>
 
-                <li>비밀번호:<input type="password" onChange={e=>setPw(e.target.value)} ></input></li>
-                <li>비밀번호 확인:<input type="password" onChange={e=>setPwRec(e.target.value)}></input></li>
-                <li>{answerPw}</li>
+      <li>
+        <label htmlFor="password">비밀번호:</label>
+        <input type="password" id="password" onChange={e => setPw(e.target.value)} />
+      </li>
+      <li>
+        <label htmlFor="confirmPassword">비밀번호 확인:</label>
+        <input type="password" id="confirmPassword" onChange={e => setPwRec(e.target.value)} />
+      </li>
+      <li>{answerPw}</li>
 
-                <li>
-                    이메일:
-                    <input 
-                        type="email" 
-                        onChange={e=>setEmail(e.target.value)}
-                        disabled={emailState}
-                    ></input>
-                    <button onClick={handleEmail}>인증 번호 발송</button>  
-                </li>
-                
-                <li>
-                    인증번호:
-                    <input type="text" onChange={e=>setCode(e.target.value)}></input>
-                    <button onClick={handleEmailValid}>확인</button>
-                </li>
-                <li>{answerCode}</li>
+      <li>
+        <label htmlFor="email">이메일:</label>
+        <input
+          type="email"
+          id="email"
+          onChange={e => setEmail(e.target.value)}
+          disabled={emailState}
+        /> </li>
+        <button1 onClick={handleEmail}>인증 번호 발송</button1>
+      
 
-                <li>이름:<input type="text" onChange={e=>setName(e.target.value)}></input></li> 
-                <li>전화번호:<input type="tel" onChange={e=>setPhoneNum(e.target.value)}></input></li>
-                <li>학과:<input type="text" onChange={e=>setDep(e.target.value)}></input></li>
-                <button onClick={handleSignUp}>회원가입</button>
-            </form>
-        </div>
-    );
+      <li>
+        <label htmlFor="code">인증번호:</label>
+        <input type="text" id="code" onChange={e => setCode(e.target.value)} />
+        </li>
+        <button1 onClick={handleEmailValid}>확인</button1>
+    
+      <li>{answerCode}</li>
+
+      <li>
+        <label htmlFor="name">이름:</label>
+        <input type="text" id="name" onChange={e => setName(e.target.value)} />
+      </li>
+
+      <li>
+        <label htmlFor="phone">전화번호:</label>
+        <input type="tel" id="phone" onChange={e => setPhoneNum(e.target.value)} />
+      </li>
+
+      <li>
+        <label htmlFor="department">학과:</label>
+        <input type="text" id="department" onChange={e => setDep(e.target.value)} />
+      </li>
+
+      <button onClick={handleSignUp}>회원가입</button>
+    </form>
+  </div>
+);
+
 }
 
 export default SignUp;

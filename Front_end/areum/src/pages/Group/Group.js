@@ -64,8 +64,7 @@ function Group() {
               <div className="top-content-header">
                 <h2>동아리</h2>
                 <hr />
-                <p>총 12 개</p>
-              </div>
+                <p>총 {posts.length} 개</p>              </div>
               <hr className="content-divider" />
             </div>
 
