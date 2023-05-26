@@ -4,6 +4,51 @@
   padding: 20px;
 }
 
+.home form {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* 검색바와 컨텐츠 사이 간격 */
+}
+
+.home form input[type="text"] {
+  flex-grow: 1;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.home form button[type="submit"]  {
+  background-color: #868893;
+  display: flex;
+  color: #fff;
+  border: none;
+  padding: 9px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.home form button[type="submit"]{
+  white-space: nowrap;
+}
+
+.home form button:hover {
+  background-color: #ccc;
+}
+
 /* 왼쪽 로그인 박스 */
 .left-container {
   display: flex;
@@ -209,57 +254,17 @@ span {
   margin-left: 0%;
   padding: 20px;
 }
-
-.home form {
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  margin-top: 20px;
-  margin-bottom: 20px; /* 검색바와 컨텐츠 사이 간격 */
-}
-
-.home form input[type="text"] {
-  flex-grow: 1;
-  width: 100%;
-  height: 30px;
-  border: none;
-  outline: none;
-  padding: 0 10px;
-  font-size: 16px;
-}
-
-.home form button[type="submit"]  {
-  background-color: #868893;
-  display: flex;
-  color: #fff;
-  border: none;
-  padding: 4px 20px;
-  font-size: 10px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-.home form button:hover {
-  background-color: #ccc;
-}
   
-  .contents {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-grow: 1;
-    margin-bottom: 20px;
-    padding: 10px;
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin-bottom: 20px;
+  padding: 10px;
   
-  }
+}
   
   .contents h2 {
     margin: 0;
@@ -317,6 +322,19 @@ span {
     margin-top: 40px;
     font-size: 7px;
     color: #868893;
+  }
+
+  .top-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .top-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   

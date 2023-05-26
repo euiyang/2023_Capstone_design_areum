@@ -4,17 +4,6 @@
   padding: 20px;
 }
 
-/* 오른쪽 컨테이너 */
-.right-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-grow: 1;
-  margin-left: 0%;
-  padding: 20px;
-}
-
 .lab form {
   flex-grow: 1;
   width: 100%;
@@ -44,106 +33,28 @@
   display: flex;
   color: #fff;
   border: none;
-  padding: 4px 20px;
-  font-size: 10px;
+  padding: 9px 20px;
+  font-size: 12px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+}
+
+.lab form button[type="submit"]{
+  white-space: nowrap;
 }
 
 .lab form button:hover {
   background-color: #ccc;
 }
   
-  .contents {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-grow: 1;
-    margin-bottom: 20px;
-    padding: 10px;
-  
-  }
-  
-  .contents h2 {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  /* 각 컨텐츠의 스타일링 */
-  .content123
-   {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 10px;
-  }  
-
-  
-  .content123 ul
-  {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .content123 h4 {
-    margin-top: 50px;
-    margin-bottom: 0px;
-  }
-
-  .content123 h2 {
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-
-  .content123 h8 {
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-
-
-  ul {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-  }
-  
-  .content-divider {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #ccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .more-link {
-    font-size: 0.8rem; 
-    margin-left: auto; 
-    display: block; 
-    width: fit-content; 
-    margin-bottom: -10px;
-  }
-  
-  .top-content {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .top-content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .lab-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 10px;
-  }
+ 
+.lab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+}
   

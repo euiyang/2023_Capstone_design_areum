@@ -67,11 +67,13 @@ function Study() {
                 <hr />
                 
                 <p>총 {posts.length} 개</p>   
+                <div className="container">
                 <Link to="/Post">
                   <button className="write-button">글작성</button>
                 </Link>           
               <hr className="content-divider" />
-            </div>              
+            </div>    
+            </div>          
 
             <Contents posts={posts}/>
             

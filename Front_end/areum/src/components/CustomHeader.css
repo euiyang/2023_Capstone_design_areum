@@ -86,6 +86,7 @@
   /* 종 모양 알림 아이콘 */
   .notification-wrapper {
     position: relative;
+    margin-top: 2px;
   }
   
   .notification-icon {
@@ -93,15 +94,15 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #868893;
     background-color: transparent;
     font-size: 30px;
+    margin-top: 10px;
   }
   
   .notification-count {
     position: absolute;
-    top: -7px;
-    right: -7px;
+    top: 5px;
+    right: -2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,5 +112,9 @@
     color: white;
     border-radius: 50%;
     font-size: 7px;
+  }
+
+  .notification{
+    color: #868893;
   }
   

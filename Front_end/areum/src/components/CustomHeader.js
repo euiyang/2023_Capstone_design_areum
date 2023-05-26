@@ -5,7 +5,7 @@ import "./CustomHeader.css"
 
 const CustomHeader=()=> {
 
-    const notificationCount = 3;
+    const notificationCount = 2;
 
     return (
     <div className="header">
@@ -24,11 +24,11 @@ const CustomHeader=()=> {
           </Link>
         <div className="notification-wrapper">
           <div className="notification-icon">
-          <FiBell />
+          <Link to ="/SignIn" className="notification"><FiBell /> </Link>
+          </div>
             {notificationCount > 0 && (
               <span className="notification-count">{notificationCount}</span>
             )}
-          </div>
         </div>
       </div>
     </div>
