@@ -62,9 +62,11 @@ function Group() {
     <div className="content123">
             <div className="top-content">
               <div className="top-content-header">
-                <h2>동아리</h2>
+                <h3>동아리 ㆍ CLUB</h3>
+                </div>
                 <hr />
-                <p>총 {posts.length} 개</p>              </div>
+                
+                <p>총 {posts.length} 개</p>              
               <hr className="content-divider" />
             </div>
 

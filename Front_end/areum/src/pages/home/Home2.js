@@ -82,19 +82,13 @@ function Home2(){
     <div className="profile-circle">
     {photo && <img className="profile-photo" src={photo} alt="Profile" />}
     </div>
-    <span>{name}</span>
+    <span>{name} 님 </span>
   </div>
   <div className="MP-button">
   <Link to ="/MyPage">
     <button>내정보수정</button>
     </Link>
   </div>
-</div>
-
-<div className="application-box">
-  <h4>지원 현황</h4>
-  <ul>
-  </ul>
 </div>
 </div>
 </div>

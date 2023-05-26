@@ -60,10 +60,11 @@ function Lab() {
           <div className="content123">
             <div className="top-content">
               <div className="top-content-header">
-                <h2>연구실</h2>
+                <h3>연구실 ㆍ LAB</h3>
+                </div>
                 <hr />
-                <p>총 {posts.length} 개</p>
-              </div>
+                
+                <p>총 {posts.length} 개</p>              
               <hr className="content-divider" />
             </div>
             <Contents posts={posts}/>

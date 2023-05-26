@@ -4,100 +4,6 @@
   padding: 20px;
 }
 
-/* 헤더-메뉴 링크 모양 */
-.header-menu {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header-menu li {
-  margin-right: 20px;
-}
-
-.header-menu li:last-child {
-  margin-right: 0;
-}
-
-.header-menu .menu-item {
-  text-decoration: none;
-  color: #000;
-  border-bottom: none;
-}
-
-.logo{
-  width: 130px;
-  height: 90px;
-  margin-bottom: 10px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 0 20px;
-}
-
-.header-content {
-  display: flex;
-  align-items: flex-start;
-}
-
-.header h1 {
-  font-size: 30px;
-  margin: 0;
-}
-
-.header-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding-left: 0;
-}
-
-.header-menu li {
-  margin-right: 20px;
-}
-
-.header-buttons {
-  display: flex;
-  align-items: center;
-}
-
-.signin-btn {
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #868893;
-  color: #fff;
-  cursor: pointer;
-}
-
-.signup-btn {
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #4453b3;
-  color: #fff;
-  cursor: pointer;
-}
-
-.notification-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #3f51b5;
-  margin-left: 10px;
-}
-
-
 /* 왼쪽 로그인 박스 */
 .left-container {
   display: flex;
@@ -108,7 +14,7 @@
 }
 
 .login-box {
-  min-height: 180px;
+  min-height: 220px;
   width: 230px;
   border: 1px solid #ccc;
   display: flex;
@@ -131,7 +37,7 @@
   height: 48px;
   margin-right: 10px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #868893;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,9 +51,58 @@
   object-fit: cover;
 }
 
+.profile-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: -90px;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.department-grade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.department-grade{
+  font-size: 7px;
+  color: #868893;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: -130px;
+}
+
+.department-text{
+  font-size: 7px;
+  color: #868893;
+  margin-left: 10px;
+}
+
 span {
   font-size: 16px;
   color: black;
+}
+
+.content-divider2 {
+  width: 180px;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: -30px;
 }
 
 .login-button {
@@ -171,7 +126,7 @@ span {
   background-color: #ccc;
 }
 
-/* home2 -> MyPage 내 정보 수정 버튼 */
+/* MyPage 내 정보 수정 버튼 */
 .MP-button {
   margin-top: 0rem;
 }
@@ -193,9 +148,9 @@ span {
   background-color: #ccc;
 }
 
-/* 지원현황 박스 */
+/* 지원 현황 박스 */
 
-.application-box {
+/* .application-box {
   width: 230px;
   display: flex;
   flex-direction: column;
@@ -241,7 +196,7 @@ span {
 .container {
   display: flex;
   flex-direction: column;
-}
+} */
 
 
 /* 오른쪽 컨테이너 */
@@ -319,7 +274,6 @@ span {
     padding: 0 10px;
   }  
 
-  
   .content123 ul
   {
     list-style: none;
@@ -328,7 +282,7 @@ span {
     width: 100%;
   }
   
-  .content123 h4 {
+  .content123 h3 {
     margin-top: 50px;
     margin-bottom: 0px;
   }
@@ -358,3 +312,11 @@ span {
     width: fit-content; 
     margin-bottom: -10px;
   }
+
+  p {
+    margin-top: 40px;
+    font-size: 7px;
+    color: #868893;
+  }
+
+  
