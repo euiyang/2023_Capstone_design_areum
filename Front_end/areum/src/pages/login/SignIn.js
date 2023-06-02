@@ -45,25 +45,34 @@ function SignIn(){
 
     useEffect(()=>{
         if(isBlank(id)||isBlank(pw)) {
-            setAnswer("빈 칸을 채워주세요");
+            setAnswer("");
         }else{
             setAnswer("");
         }
     },[id,pw]);
 
 
-    return(
+    return (
         <div className='signIn'>
-            <form>
-                <h2>로그인</h2>
-                <li>아이디:<input type="text" onChange={e=>setId(e.target.value)}></input></li>
-                <li>비밀번호:<input type="password" onChange={e=>setPw(e.target.value)}></input></li>
-                <li>{answer}</li>
-                <button onClick={handleSignIn}>로그인</button>
-            </form>
-            <li><Link to ="/signUp"> 회원가입 </Link> </li>
+          <form>
+            <h2>로그인</h2>
+            <li>
+              <label htmlFor="username">아이디:</label>
+              <input type="text" id="username" onChange={e => setId(e.target.value)}></input>
+            </li>
+            <li>
+              <label htmlFor="password">비밀번호:</label>
+              <input type="password" id="password" onChange={e => setPw(e.target.value)}></input>
+            </li>
+            <li>{answer}</li>
+            <button onClick={handleSignIn}>로그인</button>
+          </form>
+          <div className="signUpLink">
+      <Link to="/signUp">회원가입</Link>
+    </div>
         </div>
-    );
+      );
+      
 }
 
 export default SignIn;

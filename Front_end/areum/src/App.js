@@ -1,3 +1,5 @@
+
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Profile from './pages/profile/Profile.js'
 import ProfileEdit from './pages/profile/ProfileEdit.js'
@@ -9,6 +11,7 @@ import Lab from './pages/Lab/Lab.js'
 import Group from './pages/Group/Group.js'
 import Study from './pages/Study/Study.js'
 import MyPage from './pages/MyPage/MyPage.js'
+import Post from './pages/Post/Post.js'
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
           <Route path="/Group" element={<Group/>}/>
           <Route path="/Study" element={<Study/>}/>
           <Route path="/MyPage" element={<MyPage/>}/>
+          <Route path="/Post" element={<Post/>}/>
         </Routes>
       </BrowserRouter>
     </div>

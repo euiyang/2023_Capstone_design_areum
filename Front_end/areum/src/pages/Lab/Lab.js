@@ -65,7 +65,7 @@ function Lab() {
               <div className="top-content-header">
                 <h2>연구실</h2>
                 <hr />
-                <p>{posts.length}</p>
+                <p>총 {posts.length} 개</p>
               </div>
               <hr className="content-divider" />
             </div>

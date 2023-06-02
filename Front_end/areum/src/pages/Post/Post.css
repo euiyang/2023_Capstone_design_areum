@@ -1,0 +1,166 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .post-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .post-content h2 {
+    margin-bottom: 40px;
+  }
+  
+  .post-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .post-content form div {
+    margin-bottom: 20px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .post-content form label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333;
+  }
+  
+  .post-content form input[type="text"],
+  .post-content form textarea {
+    width: 98%;
+    height: 15px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .post-content form textarea {
+    resize: none;
+    height: 150px;
+    overflow: auto;
+  }
+  
+  .post-content form input[type="text"]#hashtags {
+    display: block;
+  }
+    
+  .selected-hashtags {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: auto; 
+  }
+  
+  .selected-hashtags .hashtag-block {
+    display: inline-block;
+    align-items: center;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap; 
+    width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  
+  .selected-hashtags .hashtag-block .hashtag-name {
+    margin-right: 5px;
+  }
+  
+  .hashtag-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%; 
+  }
+  
+  .hashtag-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .hashtag-input button {
+    margin-left: 10px;
+    background-color: #868893;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+.remove-hashtag{
+    margin-left: 10px;
+    background-color: #868893;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 10px;
+    cursor: pointer; 
+}  
+  
+.post-content form button[type="submit"] {
+    background-color: #868893;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+  }
+
+.post-content form,
+.post-content h1,
+.post-content div {
+  border: none;
+}
+
+/* 해시태그 추가 설명 - ? */
+
+.tooltip {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #333;
+    opacity: 0;
+    pointer-events: pointer;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .tooltip.show {
+    opacity: 1;
+    display: block;
+  }
+
