@@ -58,7 +58,6 @@
   }
     
     /* 글작성 버튼 + content-divider 컨테이너로 묶기*/
-
     .container{
       display: flex;
       align-items: center;

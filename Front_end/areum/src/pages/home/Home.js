@@ -70,24 +70,8 @@ function Home(){
   };
     return (
     <div className='home'>
-
             <CustomHeader/>
     <div class="header-content">
-        
-    {/* **로그인 전!**
-<div className="left-container">
-<div className="login-box">
-  <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
-  </div>
-  <div className="login-button">
-  <Link to ="/signIn">
-    <button>로그인</button>
-    </Link>
-  </div>
-</div>
-</div> */}
 
 <div className="left-container">
 
@@ -105,7 +89,6 @@ function Home(){
     </div>
     <div className="department-grade-container">
       <p className="department-grade">학과 <span className="department-text">{departmentRef.current && departmentRef.current.value}</span></p>
-      <p className="department-grade">학년 <span className="department-text">{gradeRef.current && gradeRef.current.value}</span></p>
     </div>
     <hr className="content-divider2" />
   </div>

@@ -64,32 +64,27 @@ function Home2(){
                  <li><Link to="/Study" style={{ textDecoration: "none" }}> 스터디 </Link></li>
                 </ui>
         <div className="header-buttons">
-            <Link to ="/MyPage">
-            <button className="signin-btn">마이페이지</button>
+            <Link to ="/signIn">
+            <button className="signin-btn">로그인</button>
             </Link>
             <Link to ="/signUp">
-            <button className="signup-btn">로그아웃</button>
+            <button className="signup-btn">회원가입</button>
             </Link>
         </div>
     </div>
     <div class="header-content">
-        
-    <div className="left-container">
 
-<div className="container">
+<div className="left-container">
 <div className="login-box">
   <div className="profile">
-    <div className="profile-circle">
-    {photo && <img className="profile-photo" src={photo} alt="Profile" />}
-    </div>
-    <span>{name} 님 </span>
+    <div className="profile-circle"></div>
+    <span>로그인하세요.</span>
   </div>
-  <div className="MP-button">
-  <Link to ="/MyPage">
-    <button>내정보수정</button>
+  <div className="login-button">
+  <Link to ="/signIn">
+    <button>로그인</button>
     </Link>
   </div>
-</div>
 </div>
 </div>
 
