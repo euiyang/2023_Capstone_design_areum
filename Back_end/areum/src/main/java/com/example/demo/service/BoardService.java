@@ -31,22 +31,39 @@ public class BoardService {
         return boardDto;
     }
 
-    public List<Board> getLabList(){
+    public List<Board> getFiveLabList(){
         Optional<List<Board>> labList = boardRepository.findFivePost(BoardType.Lab);
         if(labList.isPresent()) return labList.get();
         else return new ArrayList<>();
     }
 
-    public List<Board> getClubList() {
+    public List<Board> getFiveClubList() {
         Optional<List<Board>> clubList = boardRepository.findFivePost(BoardType.Club);
         if(clubList.isPresent()) return clubList.get();
         else return new ArrayList<>();
     }
 
-//    public List<Board> getAll() {
-//        Optional<List<Board>> labPost = boardRepository.findThreePost(BoardType.Lab);
-//        Optional<List<Board>> clubPost = boardRepository.findThreePost(BoardType.Club);
-//
-//        return
+//    public List<Board> getFiveStudyList(){
+//        Optional<List<Board>> studyList = boardRepository.findFivePost(BoardType.Study);
+//        if(studyList.isPresent()) return studyList.get();
+//        else return new ArrayList<>();
+//    }
+
+    public List<Board> getThreeLabList(){
+        Optional<List<Board>> labList = boardRepository.findThreePost(BoardType.Lab);
+        if(labList.isPresent()) return labList.get();
+        else return new ArrayList<>();
+    }
+
+    public List<Board> getThreeClubList() {
+        Optional<List<Board>> clubList = boardRepository.findThreePost(BoardType.Club);
+        if(clubList.isPresent()) return clubList.get();
+        else return new ArrayList<>();
+    }
+
+//    public List<Board> getThreeStudyList(){
+//        Optional<List<Board>> studyList = boardRepository.findThreePost(BoardType.Study);
+//        if(studyList.isPresent()) return studyList.get();
+//        else return new ArrayList<>();
 //    }
 }

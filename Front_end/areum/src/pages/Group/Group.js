@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 
 function Group() {
   const [posts,setPosts]=useState([]);
+  const token=localStorage.getItem('token');
+      const baseAxios=axios.create();
+      baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
 
   useEffect(()=>{
     fetchPageData();
@@ -14,7 +17,7 @@ function Group() {
 
   const fetchPageData= async()=>{
     try{
-      const res=await axios.get('http://localhost:8080/club')
+      const res=await baseAxios.get('http://localhost:8080/club')
       setPosts(res.data);
     }catch(error){
         console.log(error);
