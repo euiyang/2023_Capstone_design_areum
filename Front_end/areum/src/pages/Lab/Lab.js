@@ -8,7 +8,6 @@ function Lab() {
 
   const [posts,setPosts]=useState([]);
   const [searchText, setSearchText] = useState("");
-
   const [name, setName] = useState("");
   const departmentRef = useRef();
   const [photo, setPhoto] = useState(null);
@@ -23,23 +22,21 @@ function Lab() {
   
       reader.readAsDataURL(file);
     };
+      const token=localStorage.getItem('token');
+      const baseAxios=axios.create();
+      baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
 
-    useEffect(()=>{
-        fetchPageData();
-      },[]);
-    
-      const fetchPageData= async()=>{
-        try{
-          const res=await axios.get('http://localhost:8080');
-          setPosts(res.data);
-        }catch(error){
-            console.log(error);
-        }
-      };
+  useEffect(()=>{
+    fetchPageData();
+  },[]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log(searchText);
+  const fetchPageData= async()=>{
+    try{
+      const res=await baseAxios.post('http://localhost:8080/lab')
+      setPosts(res.data);
+    }catch(error){
+        console.log(error);
+    }
   };
 
   return (

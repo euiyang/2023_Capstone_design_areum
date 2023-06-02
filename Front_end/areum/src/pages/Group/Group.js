@@ -12,6 +12,9 @@ function Group() {
   const [name, setName] = useState("");
   const departmentRef = useRef();
   const [photo, setPhoto] = useState(null);
+  const token=localStorage.getItem('token');
+      const baseAxios=axios.create();
+      baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
 
   const handlePhotoUpload = (event) => {
       const file = event.target.files[0];
@@ -30,7 +33,7 @@ function Group() {
     
       const fetchPageData= async()=>{
         try{
-          const res=await axios.get('http://localhost:8080');
+          const res=await baseAxios.get('http://localhost:8080');
           setPosts(res.data);
         }catch(error){
             console.log(error);

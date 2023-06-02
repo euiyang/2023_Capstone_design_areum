@@ -14,23 +14,33 @@ public class BoardController {
 
     private final BoardService boardService;
 
-//    @GetMapping("/")
-//    public List<Board> getAll(){
-//        return boardService.getAll();
-//    }
-
-    @GetMapping("/board/{pageId}")
+    @PostMapping("/board/{pageId}")
     public BoardDto requestParam(@PathVariable("pageId") Long id) {
         return boardService.viewBoard(id);
     }
 
     @GetMapping("/lab")
     public List<Board> getLabList(){
-        return boardService.getLabList();
-    }
-    @GetMapping("/club")
-    public List<Board> getClubList(){
-        return boardService.getClubList();
+        return boardService.getFiveLabList();
     }
 
+    @GetMapping("/club")
+    public List<Board> getClubList(){
+        return boardService.getFiveClubList();
+    }
+
+    @GetMapping("/lab/home")
+    public List<Board> getThreeLabList(){
+        return boardService.getThreeLabList();
+    }
+
+    @GetMapping("/club/home")
+    public List<Board> getThreeClubList(){
+        return boardService.getThreeClubList();
+    }
+
+//    @GetMapping("/study/home")
+//    public List<Board> getThreeStudyList(){
+//        return boardService.getThreeStudyList();
+//    }
 }
