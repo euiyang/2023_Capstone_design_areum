@@ -134,7 +134,7 @@ class BoardServiceTest {
 
     @Test
     public void serviceTest(){
-        List<Board> clubList = boardService.getClubList();
+        List<Board> clubList = boardService.getFiveClubList();
 
         for (Board b: clubList) {
             System.out.println("b.getTimeStamp() = " + b.getTimeStamp());

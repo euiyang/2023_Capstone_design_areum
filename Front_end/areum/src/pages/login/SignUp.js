@@ -33,11 +33,12 @@ function SignUp(){
         if(!isBlank(id)){
             try{
                 await axios
-                .post("http://localhost:8080/signUp/id",{
+                .post("http://localhost:8080/signUp/check",null,{params:{
                     id:id
-                })
+            }})
                 .then((res)=>{//성공시 res로 값을 받아올 수 있음
-                    if(res==="1"){
+                    console.log(res.data);
+                    if(res.data=="1"){
                         setAnswerId("중복 ID 입니다. 다시 입력하세요");
                     }else{
                         setAnswerId("사용 가능한 ID 입니다");
@@ -79,33 +80,35 @@ function SignUp(){
         if(checkId&&checkPw&&checkEmail){
             try{
                 await axios
-                .post("http://localhost:8080/signUp",{
+                .post("http://localhost:8080/signUp",null,{params:{
                     id:id,
                     pw:pw,
                     name:name,
                     email:email,
                     phone:phoneNum,
                     major:dep
-                })
+            }})
             }catch(error){
                 console.log(error);
             }
             alert("회원가입에 성공했습니다");
+            document.location.href='/'
         }
     }
 
     const handleEmail=async(e)=>{
         e.preventDefault();
-        const emailForm="@dankook.ac.kr";
+        const emailForm=new RegExp('[a-z0-9]+@dankook.ac.kr');
         if(emailForm.test(email)){
             //emailForm이 email 안에 존재하는지 판별
             try{
                 await axios
-                .post("http://localhost:8080/signUp/email",{
+                .post("http://localhost:8080/signUp/email",null,{params:{
                     email:email
-                })
+            }})
                 .then((res)=>{
-                    setCmpCode(res.data.value);
+                    setCmpCode(res.data);
+                    setCheckEmail(true);
                 })
             }catch(error){
                 console.log(error);
@@ -116,28 +119,9 @@ function SignUp(){
         }
     }
 
-    // const handleEmailValid=async(e)=>{
-    //     try{
-    //         await axios
-    //         .post("http://localhost:8080/signUp/email/valid",{
-    //             code:code
-    //         })
-    //         .then((res)=>{
-    //             if(res.data.value==="success"){
-    //                 setAnswerCode("인증이 완료되었습니다");
-    //                 setEmailState(true);
-    //             }else{
-    //                 setAnswerCode("잘못된 인증번호입니다")
-    //             }
-    //         })
-    //     }catch(error){
-    //         console.log(error);
-    //     }
-    // }
-
     const handleEmailValid=(e)=>{
         e.preventDefault();
-        if(cmpCode===code){
+        if(cmpCode==code){
             setAnswerCode("인증이 완료되었습니다");
             setCheckEmail(true);
             setEmailState(true);//email 수정 불가능하게
@@ -164,6 +148,7 @@ function SignUp(){
                         type="email" 
                         onChange={e=>setEmail(e.target.value)}
                         disabled={emailState}
+                        placeholder="@dankook.ac.kr"
                     ></input>
                     <button onClick={handleEmail}>인증 번호 발송</button>  
                 </li>

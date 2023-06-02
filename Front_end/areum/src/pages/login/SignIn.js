@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {useEffect, useState } from "react";
+import { Link} from "react-router-dom";
 import './SignIn.css'
 
 function SignIn(){
@@ -10,7 +10,7 @@ function SignIn(){
     const [answer,setAnswer]=useState("");
 
     const isBlank=(value)=>{
-        if(value.trim().length==0) return true;
+        if(value.trim().length===0) return true;
         else return false;
     }
 
@@ -20,23 +20,26 @@ function SignIn(){
         if(!isBlank(id)&&!isBlank(pw)){
             try{
                 await axios
-                .post("http://localhost:8080/signIn",{
+                .post("http://localhost:8080/signIn",null,{params:{
                     id:id,
                     pw:pw,
-                })
+            }})
                 .then((res)=>{
-                    
-                    if(res.data.value==="fail"){
-                        alert("id 또는 pw가 잘못되었습니다");
-                    }else {
+                    if(res.data.name!=null){
+                        const token=res.headers["Authorization"];
+                        const user=JSON.stringify(res.data);
+                        localStorage.setItem('token',token);
+                        localStorage.setItem('user',user);
+                        console.log(user);
                         alert("환영합니다");
-                        //token and user object
+                        document.location.href='/'
+                    }else{
+                        alert("아이디 또는 패스워드가 잘못되었습니다");
                     }
                 })
             }catch(error){
                 console.log(error);
             }
-            alert("환영합니다");
         }
     }
 
