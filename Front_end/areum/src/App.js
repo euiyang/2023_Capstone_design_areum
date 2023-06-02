@@ -12,6 +12,7 @@ import Group from './pages/Group/Group.js'
 import Study from './pages/Study/Study.js'
 import MyPage from './pages/MyPage/MyPage.js'
 import Post from './pages/Post/Post.js'
+import PostDetail from './pages/Post/PostDetail.js'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Study" element={<Study/>}/>
           <Route path="/MyPage" element={<MyPage/>}/>
           <Route path="/Post" element={<Post/>}/>
+          <Route path="/PostDetail" element={<PostDetail/>}/>
         </Routes>
       </BrowserRouter>
       

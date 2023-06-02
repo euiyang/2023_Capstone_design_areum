@@ -2,21 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import './Study.css'
 import CustomHeader from "../../components/CustomHeader";
-import Contents from "../../components/Contents";
 import { Link } from "react-router-dom";
 
 
 function Study() {
 
   const [posts,setPosts]=useState([]);
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isPasswordMatch, setIsPasswordMatch] = useState(true);
+  const [searchText, setSearchText] = useState("");
+
   const [name, setName] = useState("");
-  const nameRef = useRef(); 
-  const emailRef = useRef();
   const departmentRef = useRef();
-  const gradeRef = useRef();
   const [photo, setPhoto] = useState(null);
 
   const handlePhotoUpload = (event) => {
@@ -29,27 +24,6 @@ function Study() {
   
       reader.readAsDataURL(file);
     };
-  
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    // 비밀번호와 비밀번호 확인이 일치하는지 확인
-    if (password !== confirmPassword) {
-      setIsPasswordMatch(false);
-      return;
-  }e.preventDefault();
-
-  // 이름 저장 로직
-  // 예시로 name 상태로 저장한다고 가정
-  const nameValue = nameRef.current.value;
-  setName(nameValue);
-};
 
     useEffect(()=>{
         fetchPageData();
@@ -57,14 +31,13 @@ function Study() {
     
       const fetchPageData= async()=>{
         try{
-          const res=await axios.get('http://localhost:8080')
-          
+          const res=await axios.get('http://localhost:8080');
+          setPosts(res.data);
         }catch(error){
             console.log(error);
         }
       };
 
-    const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(searchText);
@@ -132,9 +105,17 @@ function Study() {
                 </Link>           
               <hr className="content-divider" />
             </div>    
-            </div>          
+            </div>         
 
-            <Contents posts={posts}/>
+            <div className="contents">
+              {posts.map((post) => (
+                <Link to={'/post/${post.id}'} key={post.id} className="lab-content">
+                  <h4>{post.title}</h4>
+                  <p>{post.body}</p>
+                  <hr className="content-divider" />
+                </Link>
+              ))}
+            </div>
             
           </div>
         </div>

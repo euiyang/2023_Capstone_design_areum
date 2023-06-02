@@ -2,17 +2,26 @@ import React, { useRef,useState,useEffect } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import "./PostDetail.css";
+import { FiHelpCircle } from 'react-icons/fi';
 import CustomHeader from "../../components/CustomHeader";
 
 function PostDetail() {
-  return (
-    <div className='home'>
-            <CustomHeader/> 
-    <div>
-      <h1>Post Detail</h1>
+    
+    const [posts,setPosts]=useState([]);
+
+return(
+
+<div className='home'>
+            <CustomHeader/>
+<div class="header-content">
+</div>
+
+<div className="post-content post">
+      </div>
     </div>
-    </div>
-  );
+
+
+    );
 }
 
 export default PostDetail;
