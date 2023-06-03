@@ -116,16 +116,6 @@ function Home(){
         <HomeContents posts={clubPosts}/>
     </div>
     
-    <div className="content123">
-        <h4>[ 스터디 ] 같이 공부해요 </h4>
-        <li><Link to="/study" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>
-        <hr className="content-divider" />
-        <ul>
-            <li><a href="/study/content-1" style={{ textDecoration: "none" }}>Content 1</a></li> 
-            <li><a href="/study/content-2" style={{ textDecoration: "none" }}>Content 2</a></li>
-            <li><a href="/study/content-3" style={{ textDecoration: "none" }}>Content 3</a></li>
-        </ul>
-    </div>
 
 </div>
 </div>

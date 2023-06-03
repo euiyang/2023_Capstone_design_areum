@@ -5,26 +5,6 @@ import "./Post.css";
 import CustomHeader from "../../components/CustomHeader";
 
 function PostDetail() {
-    
-    const { postId } = useParams(); // URL에서 postId 가져오기
-    const [post, setPost] = useState(null);
-  
-    useEffect(() => {
-      fetchPostData();
-    }, []);
-  
-    const fetchPostData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/posts/${postId}`);
-        setPost(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    if (!post) {
-        return <div>Loading...</div>;
-      }
 
 return(
 <div className='home'>
@@ -33,10 +13,11 @@ return(
 </div>
 
 <div className="post-content post">
-    <h2>{post.title}</h2>
-    <p>{post.body}</p>
+    <h2>title</h2>
+    <p>body</p>
     </div>
     </div>
+
     );
 }
 
