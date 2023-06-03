@@ -33,10 +33,12 @@ function App() {
           <Route path="/Study" element={<Study/>}/>
           <Route path="/MyPage" element={<MyPage/>}/>
           <Route path="/Post" element={<Post/>}/>
-          <Route path="/PostDetail" element={<PostDetail/>}/>
+          <Route path="/PostDetail/:postId" element={<PostDetail />} />
+
         </Routes>
       </BrowserRouter>
     </div>
+  
   );
 }
 
