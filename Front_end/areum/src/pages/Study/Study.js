@@ -109,9 +109,8 @@ function Study() {
 
             <div className="contents">
               {posts.map((post) => (
-                <Link to={'/post/${post.id}'} key={post.id} className="lab-content">
+                <Link to={'/PostDetail/${post.id}'} key={post.id} className="study-content">
                   <h4>{post.title}</h4>
-                  <p>{post.body}</p>
                   <hr className="content-divider" />
                 </Link>
               ))}
