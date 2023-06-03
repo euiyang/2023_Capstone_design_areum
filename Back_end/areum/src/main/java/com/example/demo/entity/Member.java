@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Getter
 @Entity
@@ -19,7 +20,6 @@ public class Member {
     private String email;
     private String phone;
     private String major;
-
 }
 
 
