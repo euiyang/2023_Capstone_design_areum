@@ -19,6 +19,7 @@ function MyPage() {
     
         reader.onload = () => {
           setPhoto(reader.result);
+          localStorage.getItem('img',reader.result);
         };
     
         reader.readAsDataURL(file);
@@ -71,16 +72,16 @@ function MyPage() {
         <h1>마이페이지</h1>
 
         <div className="upload-photo">
-  {photo && (
-    <img className="uploaded-photo" src={photo} alt="Uploaded" />
-  )}
-  {!photo && (
-    <label htmlFor="photo-upload" className="upload-button">
-      사진 업로드
-      <input type="file" id="photo-upload" accept="image/*" onChange={handlePhotoUpload} />
-    </label>
-  )}
-</div>
+          {photo && (
+            <img className="uploaded-photo" src={photo} alt="Uploaded" />
+          )}
+          {!photo && (
+            <label htmlFor="photo-upload" className="upload-button">
+              사진 업로드
+              <input type="file" id="photo-upload" accept="image/*" onChange={handlePhotoUpload} />
+            </label>
+          )}
+        </div>
 
         <form onSubmit={handleSubmit}>
           <div className="input-section">
