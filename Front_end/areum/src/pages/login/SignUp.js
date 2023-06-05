@@ -155,6 +155,7 @@ return (
           id="email"
           onChange={e => setEmail(e.target.value)}
           disabled={emailState}
+          placeholder="@dankook.ac.kr"
         /> </li>
         <button1 onClick={handleEmail}>인증 번호 발송</button1>
       
