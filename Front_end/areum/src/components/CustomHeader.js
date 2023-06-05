@@ -7,6 +7,11 @@ const CustomHeader=()=> {
 
     const notificationCount = 2;
 
+    const handleLogOut=()=>{
+      localStorage.clear();
+      document.location.href='/before'
+    }
+
     return (
     <div className="header">
     <Link to="/"><img className="logo" alt="logo" src="/img/areumlogo.png" /></Link>
@@ -19,9 +24,7 @@ const CustomHeader=()=> {
           <Link to ="/MyPage">
           <button className="signin-btn">마이페이지</button>
           </Link>
-          <Link to ="/signUp">
-          <button className="signup-btn">로그아웃</button>
-          </Link>
+          <button className="signup-btn" onClick={handleLogOut}>로그아웃</button>
         <div className="notification-wrapper">
           <div className="notification-icon">
           <Link to ="/SignIn" className="notification"><FiBell /> </Link>

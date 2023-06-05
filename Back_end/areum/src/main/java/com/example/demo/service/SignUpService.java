@@ -39,8 +39,11 @@ public class SignUpService {
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setFrom("officialareum9798@gmail.com");
         msg.setTo(email);
-        msg.setSubject("areum varifying code");
-        msg.setText(code);
+        msg.setSubject("[Areum 이메일 인증 코드]");
+        msg.setText("Areum 회원가입을 위한 인증 코드입니다.\n"+
+                "본 메일은 발신전용으로 회신이 되지 않습니다.\n"+
+                "추가 문의는 해당 앱의 고객센터를 통해 접수바랍니다.\n"+
+                "인증 코드 : [ "+code+" ]");
 
         mailSender.send(msg);
 

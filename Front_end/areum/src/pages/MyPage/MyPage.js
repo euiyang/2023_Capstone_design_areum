@@ -68,25 +68,25 @@ function MyPage() {
         <form>
           <div className="input-section">
             <label htmlFor="name">이름</label>
-            <input type="text" id="name" value={user.name}
+            <input type="text" id="name" defaultValue={user.name}
             onChange={(e) => setName(e.target.value)}/>
           </div>
 
           <div className="input-section">
             <label htmlFor="email">이메일</label>
-            <input type="email" id="email" value={user.email}
+            <input type="email" id="email" defaultValue={user.email}
             onChange={(e) => setEmail(e.target.value)}/>
           </div>
 
           <div className="input-section">
             <label htmlFor="department">학과</label>
-            <input type="text" id="department" value={user.major}
+            <input type="text" id="department" defaultValue={user.major}
             onChange={(e) => setMajor(e.target.value)}/>
           </div>
 
           <div className="input-section">
             <label htmlFor="phone">전화번호</label>
-            <input type="text" id="phone" value={user.phone}
+            <input type="text" id="phone" defaultValue={user.phone}
             onChange={(e) => setPhone(e.target.value)}/>
           </div>
 
