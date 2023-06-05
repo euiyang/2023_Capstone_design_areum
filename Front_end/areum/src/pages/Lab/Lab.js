@@ -8,10 +8,11 @@ function Lab() {
 
   const [posts,setPosts]=useState([]);
   const [searchText, setSearchText] = useState("");
-
-  const [name, setName] = useState("");
-  const departmentRef = useRef();
   const [photo, setPhoto] = useState(null);
+
+  const user=JSON.parse(localStorage.getItem('user'));
+  const userImg=localStorage.getItem('img');
+
   const token=localStorage.getItem('token');
       const baseAxios=axios.create();
       baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
@@ -58,14 +59,18 @@ function Lab() {
   <div className="profile-info">
     <div className="profile-top">
       <div className="profile-circle">
-        {photo && <img className="profile-photo" src={photo} alt="Profile" />}
+        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
       </div>
       <div className="name-container">
-        <span>{name} 님 </span>
+        <span>{user.name} 님 </span>
       </div>
     </div>
     <div className="department-grade-container">
-      <p className="department-grade">학과 <span className="department-text">{departmentRef.current && departmentRef.current.value}</span></p>
+      <p className="department-grade">
+        <span className="department-text">
+          {user.major} 학과
+        </span>
+      </p>
     </div>
     <hr className="content-divider2" />
   </div>

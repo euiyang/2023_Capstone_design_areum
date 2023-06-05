@@ -9,21 +9,10 @@ function Study() {
 
   const [posts,setPosts]=useState([]);
   const [searchText, setSearchText] = useState("");
-
-  const [name, setName] = useState("");
-  const departmentRef = useRef();
-  const [photo, setPhoto] = useState(null);
-
-  const handlePhotoUpload = (event) => {
-      const file = event.target.files[0];
-      const reader = new FileReader();
   
-      reader.onload = () => {
-        setPhoto(reader.result);
-      };
-  
-      reader.readAsDataURL(file);
-    };
+  const user=JSON.parse(localStorage.getItem('user'));
+  const userImg=localStorage.getItem("img");
+
 
     useEffect(()=>{
         fetchPageData();
@@ -48,7 +37,6 @@ function Study() {
       <CustomHeader/>  
 
     <div class="header-content">
-      
     <div className="left-container">
 
 <div className="container">
@@ -57,14 +45,18 @@ function Study() {
   <div className="profile-info">
     <div className="profile-top">
       <div className="profile-circle">
-        {photo && <img className="profile-photo" src={photo} alt="Profile" />}
+        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
       </div>
       <div className="name-container">
-        <span>{name} 님 </span>
+        <span>{user.name} 님 </span>
       </div>
     </div>
     <div className="department-grade-container">
-      <p className="department-grade">학과 <span className="department-text">{departmentRef.current && departmentRef.current.value}</span></p>
+      <p className="department-grade">
+        <span className="department-text">
+          {user.major} 학과
+        </span>
+      </p>
     </div>
     <hr className="content-divider2" />
   </div>
@@ -78,7 +70,6 @@ function Study() {
 </div>
 </div>
 </div>
-
         <div className="right-container">
 
         <form onSubmit={handleSearch}>
