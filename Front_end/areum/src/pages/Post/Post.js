@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiHelpCircle } from 'react-icons/fi';
 import "./Post.css";
 import CustomHeader from "../../components/CustomHeader";
 
@@ -8,7 +9,7 @@ function Post(){
     const [content, setContent] = useState("");
     const [hashtags, setHashtags] = useState([]);
     const [inputValue, setInputValue] = useState("");
-    const [showTooltip, setShowTooltip] = useState(false);
+    const [showTooltip, setShowTooltip] = useState(false); //툴팁
     
     const handleHashtagChange = (e) => {
         setInputValue(e.target.value);
@@ -35,6 +36,7 @@ function Post(){
       //게시 처리 내용 추가해야 함
     };
   
+    //툴팁
     const toggleTooltip = () => {
         setShowTooltip(!showTooltip);
       };
@@ -59,12 +61,12 @@ return(
             <textarea id="content" value={content} onChange={(e) => setContent(e.target.value)}></textarea>
           </div>
           <div>
+          <div className="hashtag-description">
             <label htmlFor="hashtags">해시태그</label>
-            <div className="hashtag-description">
-              <span className="question-mark-icon" onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
-                ?
-              </span>
-              <div className="tooltip">
+            <span className="question-mark-icon" onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
+              <FiHelpCircle />
+            </span>              
+              <div className={`tooltip ${showTooltip ? 'show' : ''}`}>
                 , 혹은 enter 시 3개까지 해시태그 추가가 가능합니다
               </div>
             </div>

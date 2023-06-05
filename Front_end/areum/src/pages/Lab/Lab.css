@@ -4,145 +4,6 @@
   padding: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 0 20px;
-}
-
-.header-content {
-  display: flex;
-  align-items: flex-start;
-}
-
-.header h1 {
-  font-size: 30px;
-  margin: 0;
-}
-
-.header-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding-left: 0;
-}
-
-.header-menu li {
-  margin-right: 20px;
-}
-
-.header-buttons {
-  display: flex;
-  align-items: center;
-}
-
-.signin-btn {
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #868893;
-  color: #fff;
-  cursor: pointer;
-}
-
-.signup-btn {
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #4453b3;
-  color: #fff;
-  cursor: pointer;
-}
-
-.notification-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #3f51b5;
-  margin-left: 10px;
-}
-
-
-/* 왼쪽 로그인 박스 */
-.left-container {
-  
-  display: flex;
-  flex-wrap: wrap; /* 영역이 넘쳤을 경우 다음줄로 넘어가도록 설정 */
-  justify-content: space-between;
-  align-items: center; /* 각 컨텐츠의 높이를 동일하게 맞추기 위해 */
-  padding: 20px;
-}
-
-.login-box {
-  min-height: 180px;
-  width: 230px;
-  border: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-}
-
-.profile-circle {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-  background-color: #868893;
-  border-radius: 50%;
-}
-
-span {
-  font-size: 16px;
-  color: black;
-}
-
-.login-button {
-  margin-top: 0rem;
-}
-
-.login-button button {
-  width: 180px ;
-  margin-bottom: 20px;
-  background-color: #868893;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.login-button button:hover {
-  background-color: #ccc;
-}
-
-/* 오른쪽 컨테이너 */
-.right-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-grow: 1;
-  margin-left: 0%;
-  padding: 20px;
-}
-
 .lab form {
   flex-grow: 1;
   width: 100%;
@@ -172,106 +33,34 @@ span {
   display: flex;
   color: #fff;
   border: none;
-  padding: 4px 20px;
-  font-size: 10px;
+  padding: 9px 20px;
+  font-size: 12px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+}
+
+.lab form button[type="submit"]{
+  white-space: nowrap;
 }
 
 .lab form button:hover {
   background-color: #ccc;
 }
   
-  .contents {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-grow: 1;
-    margin-bottom: 20px;
-    padding: 10px;
-  
-  }
-  
-  .contents h2 {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  /* 각 컨텐츠의 스타일링 */
-  .content123
-   {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 10px;
-  }  
+ 
+.lab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px 0px;
+  border-bottom: none;
+  text-decoration: none;
+}
 
-  
-  .content123 ul
-  {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .content123 h4 {
-    margin-top: 50px;
-    margin-bottom: 0px;
-  }
-
-  .content123 h2 {
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-
-  .content123 h8 {
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-
-
-  ul {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-  }
-  
-  .content-divider {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #ccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .more-link {
-    font-size: 0.8rem; 
-    margin-left: auto; 
-    display: block; 
-    width: fit-content; 
-    margin-bottom: -10px;
-  }
-  
-  .top-content {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .top-content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .lab-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 10px;
-  }
+.lab h4 {
+  color: #000;
+}
   
