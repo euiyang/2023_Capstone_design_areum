@@ -6,15 +6,8 @@ import CustomHeader from "../../components/CustomHeader";
 import HomeContents from "../../components/HomeContents";
 
 function Home(){
-
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isPasswordMatch, setIsPasswordMatch] = useState(true);
   const [name, setName] = useState("");
-  const nameRef = useRef(); 
-  const emailRef = useRef();
   const departmentRef = useRef();
-  const gradeRef = useRef();
   const [photo, setPhoto] = useState(null);
 
     const [labPosts,setLabPosts]=useState([]);
@@ -92,17 +85,6 @@ function Home(){
           </form>
     
     <div className="content123">
-        <h3>[ 스터디 ] 같이 공부해요 </h3>
-        <li><Link to="/study" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>
-        <hr className="content-divider" />
-        <ul>
-            <li><a href="/study/content-1" style={{ textDecoration: "none" }}>Content 1</a></li> 
-            <li><a href="/study/content-2" style={{ textDecoration: "none" }}>Content 2</a></li>
-            <li><a href="/study/content-3" style={{ textDecoration: "none" }}>Content 3</a></li>
-        </ul>
-    </div>
-
-    <div className="content123">
         <h3>[ 연구실 ] 우리 학교 연구실 </h3>
         <li><Link to="/lab" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>        
         <hr className="content-divider" />
@@ -115,7 +97,17 @@ function Home(){
         <hr className="content-divider" />
         <HomeContents posts={clubPosts}/>
     </div>
-    
+
+    <div className="content123">
+        <h3>[ 스터디 ] 같이 공부해요 </h3>
+        <li><Link to="/study" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>
+        <hr className="content-divider" />
+        <ul>
+            <li><a href="/study/content-1" style={{ textDecoration: "none" }}>Content 1</a></li> 
+            <li><a href="/study/content-2" style={{ textDecoration: "none" }}>Content 2</a></li>
+            <li><a href="/study/content-3" style={{ textDecoration: "none" }}>Content 3</a></li>
+        </ul>
+    </div>
 
 </div>
 </div>
