@@ -13,8 +13,8 @@ return(
 </div>
 
 <div className="post-content post">
-    <h2>title</h2>
-    <p>body</p>
+    <h2>title!</h2>
+    <p>body!</p>
     </div>
     </div>
 
