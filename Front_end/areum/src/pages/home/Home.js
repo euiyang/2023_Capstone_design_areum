@@ -6,16 +6,15 @@ import CustomHeader from "../../components/CustomHeader";
 import HomeContents from "../../components/HomeContents";
 
 function Home(){
-  const [name, setName] = useState("");
-  const departmentRef = useRef();
-  const [photo, setPhoto] = useState(null);
 
     const [labPosts,setLabPosts]=useState([]);
     const [clubPosts,setClubPosts]=useState([]);
+    const user=JSON.parse(localStorage.getItem('user'));
+    const userImg=localStorage.getItem('img');
 
-    useEffect(()=>{
+      useEffect(()=>{
         fetchPageData();
-      },[]);
+      },[])
 
       const token=localStorage.getItem('token');
       const baseAxios=axios.create();
@@ -50,14 +49,18 @@ function Home(){
   <div className="profile-info">
     <div className="profile-top">
       <div className="profile-circle">
-        {photo && <img className="profile-photo" src={photo} alt="Profile" />}
+        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
       </div>
       <div className="name-container">
-        <span>{name} 님 </span>
+        <span>{user.name} 님 </span>
       </div>
     </div>
     <div className="department-grade-container">
-      <p className="department-grade">학과 <span className="department-text">{departmentRef.current && departmentRef.current.value}</span></p>
+      <p className="department-grade">
+        <span className="department-text">
+          {user.major} 학과
+        </span>
+      </p>
     </div>
     <hr className="content-divider2" />
   </div>
