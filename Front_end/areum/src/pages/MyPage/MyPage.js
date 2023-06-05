@@ -1,53 +1,50 @@
-import { Link } from "react-router-dom";
+import axios from "axios"
 import React, { useRef, useState } from "react";
 import "./MyPage.css";
+
 import CustomHeader from "../../components/CustomHeader";
 
 function MyPage() {
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const [isPasswordMatch, setIsPasswordMatch] = useState(true);
-    const [name, setName] = useState("");
     const nameRef = useRef(); 
-    const emailRef = useRef();
-    const departmentRef = useRef();
-    const gradeRef = useRef();
-    const [photo, setPhoto] = useState(null);
+    const [name,setName]=useState("");
+    const [email,setEmail]=useState("");
+    const [major,setMajor]=useState("");
+    const [phone,setPhone]=useState("");
+
+    const user=JSON.parse(localStorage.getItem('user'));
+    const photo=localStorage.getItem("img");
+
+    const token=localStorage.getItem('token');
+    const baseAxios=axios.create();
+    baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
 
     const handlePhotoUpload = (event) => {
         const file = event.target.files[0];
         const reader = new FileReader();
     
         reader.onload = () => {
-          setPhoto(reader.result);
-          localStorage.getItem('img',reader.result);
+          localStorage.setItem('img',reader.result);
         };
     
         reader.readAsDataURL(file);
       };
-    
-    const handlePasswordChange = (e) => {
-      setPassword(e.target.value);
-    };
   
-    const handleConfirmPasswordChange = (e) => {
-      setConfirmPassword(e.target.value);
-    };
-  
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
       e.preventDefault();
-  
-      // 비밀번호와 비밀번호 확인이 일치하는지 확인
-      if (password !== confirmPassword) {
-        setIsPasswordMatch(false);
-        return;
-    }
 
-    // 이름 저장 로직
-    // 예시로 name 상태로 저장한다고 가정
-    const nameValue = nameRef.current.value;
-    setName(nameValue);
-};
+      try{
+        await baseAxios
+        .get("http://localhost:8080/MyPage",null,{params:{
+            id:user.id,
+            name:name,
+            email:email,
+            major:major,
+            phone:phone
+      }})
+      }catch(error){
+          console.log(error);
+      }
+    }
 
     return (
         <div className='MyPage'>
@@ -58,7 +55,7 @@ function MyPage() {
 
         <div className="upload-photo">
           {photo && (
-            <img className="uploaded-photo" src={photo} alt="Uploaded" />
+            <img className="uploaded-photo" src={photo} alt="Uploaded"/>
           )}
           {!photo && (
             <label htmlFor="photo-upload" className="upload-button">
@@ -68,52 +65,32 @@ function MyPage() {
           )}
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="input-section">
             <label htmlFor="name">이름</label>
-            <input type="text" id="name" ref={nameRef} />
+            <input type="text" id="name" value={user.name}
+            onChange={(e) => setName(e.target.value)}/>
           </div>
 
           <div className="input-section">
             <label htmlFor="email">이메일</label>
-            <input type="email" id="email" ref={emailRef} />
+            <input type="email" id="email" value={user.email}
+            onChange={(e) => setEmail(e.target.value)}/>
           </div>
 
           <div className="input-section">
             <label htmlFor="department">학과</label>
-            <input type="text" id="department" ref={departmentRef} />
+            <input type="text" id="department" value={user.major}
+            onChange={(e) => setMajor(e.target.value)}/>
           </div>
 
           <div className="input-section">
-            <label htmlFor="grade">학년</label>
-            <input type="text" id="grade" ref={gradeRef} />
+            <label htmlFor="phone">전화번호</label>
+            <input type="text" id="phone" value={user.phone}
+            onChange={(e) => setPhone(e.target.value)}/>
           </div>
 
-          <div className="password-section">
-            <label htmlFor="password">비밀번호</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </div>
-
-          <div className="password-section">
-            <label htmlFor="confirmPassword">비밀번호 확인</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              value={confirmPassword}
-              onChange={handleConfirmPasswordChange}
-            />
-          </div>
-
-          {!isPasswordMatch && (
-            <p className="error-message">비밀번호가 일치하지 않습니다.</p>
-          )}
-
-          <button type="submit" className="save-button">
+          <button type="submit" className="save-button" onClick={handleSubmit}>
             변경 완료
           </button>
         </form>

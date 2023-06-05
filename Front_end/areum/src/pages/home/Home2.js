@@ -2,16 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useRef, useState } from "react";
 import "./Home.css";
 
-function Home2(){
-
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isPasswordMatch, setIsPasswordMatch] = useState(true);
-  const [name, setName] = useState("");
-  const nameRef = useRef(); 
-  const emailRef = useRef();
-  const departmentRef = useRef();
-  const gradeRef = useRef();
+function Home2(){ 
   const [photo, setPhoto] = useState(null);
 
   const handlePhotoUpload = (event) => {
@@ -24,29 +15,6 @@ function Home2(){
   
       reader.readAsDataURL(file);
     };
-  
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // 비밀번호와 비밀번호 확인이 일치하는지 확인
-    if (password !== confirmPassword) {
-      setIsPasswordMatch(false);
-      return;
-  }
-
-  // 이름 저장 로직
-  // 예시로 name 상태로 저장한다고 가정
-  const nameValue = nameRef.current.value;
-  setName(nameValue);
-};
 
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
@@ -57,7 +25,7 @@ function Home2(){
     return (
         <div className='home'>
             <div className="header">
-            <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
+            <Link to="/"><img className="logo" alt="logo" src="/img/areumlogo.png" /></Link>
         <ui className="header-menu">
          <li><Link to="/Lab" className="menu-item"> 연구실 </Link></li>
          <li><Link to="/Group" className="menu-item"> 동아리 </Link></li>
