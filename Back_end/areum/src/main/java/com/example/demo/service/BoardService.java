@@ -22,7 +22,7 @@ public class BoardService {
 
     private final BoardJpaRepository boardRepository;
                 
-    public BoardDto viewBoard(Long id){
+    public BoardDto getBoard(Long id){
         Optional<Board> board = boardRepository.findById(id);
         BoardDto boardDto = new BoardDto();
         boardDto.setTimeStamp(board.get().getTimeStamp());

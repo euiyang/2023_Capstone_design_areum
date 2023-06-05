@@ -34,9 +34,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests((requests)->requests
                 .requestMatchers("/signIn/*","/signIn").permitAll()
                 .requestMatchers("/signUp/*","/signUp").permitAll()
-                                .requestMatchers("/lab/*","/lab").permitAll()
-                                .requestMatchers("/club/*","/club").permitAll()
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 )
                 .addFilterBefore(new JwtFilter(tokenProvider), UsernamePasswordAuthenticationFilter.class)
 

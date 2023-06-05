@@ -9,7 +9,7 @@ const CustomHeader=()=> {
 
     return (
     <div className="header">
-    <Link to="/"><img className="logo" alt="logo" src="img/areumlogo.png" /></Link>
+    <Link to="/"><img className="logo" alt="logo" src="/img/areumlogo.png" /></Link>
         <ui className="header-menu">
          <li><Link to="/Lab" className="menu-item"> 연구실 </Link></li>
          <li><Link to="/Group" className="menu-item"> 동아리 </Link></li>
