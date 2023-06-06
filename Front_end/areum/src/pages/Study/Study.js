@@ -17,7 +17,7 @@ function Study() {
     
       const fetchPageData= async()=>{
         try{
-          const res=await axios.get('http://localhost:8080');
+          const res=await axios.get('http://localhost:8080/study');
           setPosts(res.data);
         }catch(error){
             console.log(error);
@@ -77,11 +77,13 @@ function Study() {
             </div>         
 
             <div className="study-contents">
-              {posts.map((post) => (
-                <Link to={'/PostDetail/${post.id}'} key={post.id} className="study-content">
-                  <h4>{post.title}</h4>
-                  <hr className="content-divider" />
-                </Link>
+              {posts.map((page) => (
+                <React.Fragment key={page.id}>
+                <a href={`/PostDetail/${page.id}`} style={{ textDecoration: "none" }}>
+                  {page.pageName}
+                </a>
+              <hr className="content-divider" />
+              </React.Fragment>
               ))}
             </div>
             

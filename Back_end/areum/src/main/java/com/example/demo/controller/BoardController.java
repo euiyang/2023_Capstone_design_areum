@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.BoardDto;
+import com.example.demo.dto.StudyDto;
 import com.example.demo.entity.Board;
 import com.example.demo.service.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -39,8 +40,18 @@ public class BoardController {
         return boardService.getThreeClubList();
     }
 
-//    @GetMapping("/study/home")
-//    public List<Board> getThreeStudyList(){
-//        return boardService.getThreeStudyList();
-//    }
+    @GetMapping("/study")
+    public List<Board> getStudyList(){
+        return boardService.getFiveStudyList();
+    }
+
+    @GetMapping("/study/home")
+    public List<Board> getThreeStudyList(){
+        return boardService.getThreeStudyList();
+    }
+
+    @PostMapping("/study/post")
+    public void postBoard(StudyDto studyDto){
+        boardService.postBoard(studyDto);
+    }
 }

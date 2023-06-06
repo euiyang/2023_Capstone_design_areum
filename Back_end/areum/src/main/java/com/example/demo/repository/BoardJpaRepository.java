@@ -17,6 +17,7 @@ public interface BoardJpaRepository extends JpaRepository<Board, Long> {
 
     @Query(value="SELECT b FROM Board b WHERE b.boardType=:type ORDER BY b.timeStamp desc LIMIT 3")
     Optional<List<Board>> findThreePost(@Param("type") BoardType type);
+
 }
 
 //ORDER BY time_stamp desc LIMIT 3

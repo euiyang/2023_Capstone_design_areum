@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 
 import com.example.demo.dto.BoardDto;
+import com.example.demo.dto.StudyDto;
 import com.example.demo.entity.Board;
 import com.example.demo.entity.Member;
 import com.example.demo.enumerate.BoardType;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.util.ListUtils;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,11 +45,11 @@ public class BoardService {
         else return new ArrayList<>();
     }
 
-//    public List<Board> getFiveStudyList(){
-//        Optional<List<Board>> studyList = boardRepository.findFivePost(BoardType.Study);
-//        if(studyList.isPresent()) return studyList.get();
-//        else return new ArrayList<>();
-//    }
+    public List<Board> getFiveStudyList(){
+        Optional<List<Board>> studyList = boardRepository.findFivePost(BoardType.Study);
+        if(studyList.isPresent()) return studyList.get();
+        else return new ArrayList<>();
+    }
 
     public List<Board> getThreeLabList(){
         Optional<List<Board>> labList = boardRepository.findThreePost(BoardType.Lab);
@@ -61,9 +63,19 @@ public class BoardService {
         else return new ArrayList<>();
     }
 
-//    public List<Board> getThreeStudyList(){
-//        Optional<List<Board>> studyList = boardRepository.findThreePost(BoardType.Study);
-//        if(studyList.isPresent()) return studyList.get();
-//        else return new ArrayList<>();
-//    }
+    public List<Board> getThreeStudyList(){
+        Optional<List<Board>> studyList = boardRepository.findThreePost(BoardType.Study);
+        if(studyList.isPresent()) return studyList.get();
+        else return new ArrayList<>();
+    }
+
+    public void postBoard(StudyDto studyDto) {
+        Board b=Board.builder()
+                .boardType(BoardType.Study)
+                .timeStamp(new Date())
+                .pageName(studyDto.getTitle())
+                .pageBody(studyDto.getContent())
+                .build();
+        boardRepository.save(b);
+    }
 }

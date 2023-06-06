@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { FiHelpCircle } from 'react-icons/fi';
 import "./Post.css";
@@ -10,6 +11,10 @@ function Post(){
     const [hashtags, setHashtags] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [showTooltip, setShowTooltip] = useState(false); //툴팁
+
+    const token=localStorage.getItem('token');
+      const baseAxios=axios.create();
+      baseAxios.defaults.headers.common["Authorization"]=`Bearer ${token}`;
     
     const handleHashtagChange = (e) => {
         setInputValue(e.target.value);
@@ -31,9 +36,19 @@ function Post(){
         setHashtags(updatedHashtags);
       };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
       e.preventDefault();
-      //게시 처리 내용 추가해야 함
+      
+      try{
+        await baseAxios
+        .post("http://localhost:8080/study/post",null,{params:{
+            title:title,
+            content:content
+    }})
+    }catch(error){
+        console.log(error);
+    }
+    document.location.href='/Study';
     };
   
     //툴팁

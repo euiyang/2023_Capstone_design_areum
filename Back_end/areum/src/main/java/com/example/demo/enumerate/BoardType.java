@@ -1,5 +1,5 @@
 package com.example.demo.enumerate;
 
 public enum BoardType {
-    Club, Lab
+    Club, Lab, Study
 }

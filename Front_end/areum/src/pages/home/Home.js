@@ -10,6 +10,7 @@ function Home(){
 
     const [labPosts,setLabPosts]=useState([]);
     const [clubPosts,setClubPosts]=useState([]);
+    const [studyPosts,setStudyPosts]=useState([]);
 
       useEffect(()=>{
         fetchPageData();
@@ -25,6 +26,8 @@ function Home(){
           setLabPosts(lRes.data);
           const cRes=await baseAxios.get('http://localhost:8080/club/home')    
           setClubPosts(cRes.data); 
+          const sRes=await baseAxios.get('http://localhost:8080/study/home')    
+          setStudyPosts(sRes.data); 
         }catch(error){
             console.log(error);
         }
@@ -83,13 +86,9 @@ function Home(){
 
     <div className="content123">
         <h3>[ 스터디 ] 같이 공부해요 </h3>
-        <li><Link to="/study" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>
+        <li><Link to="/group" class="more-link" style={{ textDecoration: "none" }} > 더보기 </Link></li>
         <hr className="content-divider" />
-        <ul>
-            <li><a href="/study/content-1" style={{ textDecoration: "none" }}>Content 1</a></li> 
-            <li><a href="/study/content-2" style={{ textDecoration: "none" }}>Content 2</a></li>
-            <li><a href="/study/content-3" style={{ textDecoration: "none" }}>Content 3</a></li>
-        </ul>
+        <HomeContents posts={studyPosts}/>
     </div>
 
 </div>
