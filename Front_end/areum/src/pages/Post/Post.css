@@ -192,4 +192,27 @@
     margin-bottom: -10px;
     position: relative;
   }
-  
+
+  .post-content button {
+    background-color: #868893;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 30px;
+}  
+
+.post-content button:hover {
+  background-color: #ccc;
+}
+
+.page-body {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+

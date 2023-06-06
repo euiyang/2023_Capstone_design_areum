@@ -3,16 +3,13 @@ import axios from 'axios';
 import './Study.css'
 import CustomHeader from "../../components/CustomHeader";
 import { Link } from "react-router-dom";
+import LoginBox from "../../components/LoginBox";
 
 
 function Study() {
 
   const [posts,setPosts]=useState([]);
   const [searchText, setSearchText] = useState("");
-  
-  const user=JSON.parse(localStorage.getItem('user'));
-  const userImg=localStorage.getItem("img");
-
 
     useEffect(()=>{
         fetchPageData();
@@ -41,26 +38,7 @@ function Study() {
 
 <div className="container">
 <div className="login-box">
-<div className="profile">
-  <div className="profile-info">
-    <div className="profile-top">
-      <div className="profile-circle">
-        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
-      </div>
-      <div className="name-container">
-        <span>{user.name} 님 </span>
-      </div>
-    </div>
-    <div className="department-grade-container">
-      <p className="department-grade">
-        <span className="department-text">
-          {user.major} 학과
-        </span>
-      </p>
-    </div>
-    <hr className="content-divider2" />
-  </div>
-</div>
+<LoginBox/>
 
   <div className="MP-button">
   <Link to ="/MyPage">
@@ -98,7 +76,7 @@ function Study() {
             </div>    
             </div>         
 
-            <div className="contents">
+            <div className="study-contents">
               {posts.map((post) => (
                 <Link to={'/PostDetail/${post.id}'} key={post.id} className="study-content">
                   <h4>{post.title}</h4>

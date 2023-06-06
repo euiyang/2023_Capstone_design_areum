@@ -80,7 +80,7 @@
 .profile-circle {
   width: 48px;
   height: 48px;
-  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 50%;
   background-color: #868893;
   display: flex;
@@ -134,7 +134,7 @@
 .department-text{
   font-size: 7px;
   color: #868893;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 
 span {
