@@ -45,8 +45,8 @@ function Home2(){
 <div className="left-container">
 <div className="login-box">
   <div className="profile">
-    <div className="profile-circle"></div>
-    <span>로그인하세요.</span>
+    <div className="profile-circle" style={{ marginLeft: '-10px' }}></div>
+    <span style={{ marginLeft: '10px' }}>로그인하세요.</span>
   </div>
   <div className="login-button">
   <Link to ="/signIn">

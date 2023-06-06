@@ -3,15 +3,13 @@ import axios from 'axios';
 import "./Lab.css";
 import CustomHeader from "../../components/CustomHeader";
 import { Link } from "react-router-dom";
+import LoginBox from "../../components/LoginBox";
 
 function Lab() {
 
   const [posts,setPosts]=useState([]);
   const [searchText, setSearchText] = useState("");
   const [photo, setPhoto] = useState(null);
-
-  const user=JSON.parse(localStorage.getItem('user'));
-  const userImg=localStorage.getItem('img');
 
   const token=localStorage.getItem('token');
       const baseAxios=axios.create();
@@ -55,26 +53,7 @@ function Lab() {
 
 <div className="container">
 <div className="login-box">
-<div className="profile">
-  <div className="profile-info">
-    <div className="profile-top">
-      <div className="profile-circle">
-        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
-      </div>
-      <div className="name-container">
-        <span>{user.name} 님 </span>
-      </div>
-    </div>
-    <div className="department-grade-container">
-      <p className="department-grade">
-        <span className="department-text">
-          {user.major} 학과
-        </span>
-      </p>
-    </div>
-    <hr className="content-divider2" />
-  </div>
-</div>
+<LoginBox/>
 
   <div className="MP-button">
   <Link to ="/MyPage">
@@ -106,7 +85,7 @@ function Lab() {
               <hr className="content-divider" />
             </div>
             
-            <div className="contents">
+            <div className="lab-contents">
             {posts.map((page) => (
               <React.Fragment key={page.id}>
                 <a href={`/PostDetail/${page.id}`} style={{ textDecoration: "none" }}>

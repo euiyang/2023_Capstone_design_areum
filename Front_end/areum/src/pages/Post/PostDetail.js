@@ -38,7 +38,7 @@ const PostDetail=()=> {
 
         <div className="post-content post">
             <h2>{post.pageName}</h2>
-            <p>{post.pageBody}</p>
+            <p className="page-body">{post.pageBody}</p>
             <button onClick={handleApplyNow}>지원하기</button>
             </div>
         </div>

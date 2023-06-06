@@ -1,16 +1,15 @@
-import React, { useRef,useState,useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import "./Home.css";
 import CustomHeader from "../../components/CustomHeader";
+import LoginBox from "../../components/LoginBox";
 import HomeContents from "../../components/HomeContents";
 
 function Home(){
 
     const [labPosts,setLabPosts]=useState([]);
     const [clubPosts,setClubPosts]=useState([]);
-    const user=JSON.parse(localStorage.getItem('user'));
-    const userImg=localStorage.getItem('img');
 
       useEffect(()=>{
         fetchPageData();
@@ -45,26 +44,7 @@ function Home(){
 
 <div className="container">
 <div className="login-box">
-<div className="profile">
-  <div className="profile-info">
-    <div className="profile-top">
-      <div className="profile-circle">
-        {userImg && <img className="profile-photo" src={userImg} alt="Profile" />}
-      </div>
-      <div className="name-container">
-        <span>{user.name} 님 </span>
-      </div>
-    </div>
-    <div className="department-grade-container">
-      <p className="department-grade">
-        <span className="department-text">
-          {user.major} 학과
-        </span>
-      </p>
-    </div>
-    <hr className="content-divider2" />
-  </div>
-</div>
+<LoginBox/>
 
   <div className="MP-button">
   <Link to ="/MyPage">
