@@ -210,9 +210,25 @@
 }
 
 .page-body {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 2;
   margin-top: 50px;
   margin-bottom: 100px;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.img{
+  height: 98%;
+  width: 98%;
+  margin-bottom: 30px;
 }
 
