@@ -4,7 +4,7 @@ const HomeContents = ({posts}) => {
     return (
         <div className="contents">
         {posts.map((page) => (
-          <a href={`/PostDetail/${page.id}`} key={page.id} style={{ textDecoration: "none" }}>
+          <a href={`/PostDetail/${page.id}`} key={page.id} style={{ textDecoration: "none" }} className="home-contents">
           {page.pageName}
         </a>
         ))}

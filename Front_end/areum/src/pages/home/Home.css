@@ -261,9 +261,8 @@ span {
   align-items: flex-start;
   justify-content: flex-start;
   flex-grow: 1;
-  margin-bottom: 20px;
+  margin-bottom: -40px;
   padding: 10px;
-  
 }
   
   .contents h2 {
@@ -337,4 +336,8 @@ span {
     margin-bottom: 10px;
   }
 
+  .home-contents{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   

@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./Post.css";
 import CustomHeader from "../../components/CustomHeader";
 import { useParams } from "react-router";
+import ReactHtmlParser from 'react-html-parser';
 
 const PostDetail=()=> {
 
@@ -38,9 +39,15 @@ const PostDetail=()=> {
 
         <div className="post-content post">
             <h2>{post.pageName}</h2>
-            <p className="page-body">{post.pageBody}</p>
-            <button onClick={handleApplyNow}>지원하기</button>
-            </div>
+            <img className="img" alt="logo" src="/img/lab.png" />
+<div>
+  <p className="page-body">
+    {post && post.pageBody && ReactHtmlParser(post.pageBody.replace(/\n/g, '<br />'))}
+  </p>
+</div>
+
+<button onClick={handleApplyNow}>지원하기</button>
+        </div>
         </div>
 
     );
